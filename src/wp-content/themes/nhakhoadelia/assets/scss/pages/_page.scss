@@ -1,0 +1,144 @@
+/*------------------------------
+* Page
+------------------------------*/
+.site-main {
+	padding-top: 46px;
+	overflow: hidden;
+	.page-heading {
+		text-align: center;
+		margin-bottom: 60px;
+		@include bp(tab) {
+			margin-bottom: 30px;
+		}
+	}
+	.article-body {
+		margin-bottom: 150px;
+		@include bp(tab) {
+			margin-bottom: setvw(80px);
+		}
+		a {
+			color: $color-red;
+			font-weight: bold;
+		}
+		h2 {
+			@include fs(34,44);
+			color: $color-red;
+			font-weight: bold;
+			letter-spacing: 1.3px;
+			margin-bottom: 42px;
+			@include bp(tab) {
+				margin-bottom: 30px;
+				@include fs(20,30);
+			}
+		}
+		p{
+			@include fs(18,33);
+			margin-bottom: 25px;
+			@include bp(0, 640px) {
+				@include fs(16,26);
+				margin-bottom: 20px;
+				br {
+					display: none;
+				}
+			}
+			.s1 {
+				@include fs(18,33);
+				font-weight: bold;
+				margin-bottom: 25px;
+				@include bp(0, 640px) {
+					@include fs(16,26);
+					margin-bottom: 20px;
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+		ol {
+			padding-left: 30px;
+			@include bp(0, 640px) {
+				padding-left: 22px;
+			}
+			li {
+				@include fs(18,33);
+				font-weight: bold;
+				margin-bottom: 20px;
+				@include bp(0, 640px) {
+					@include fs(16,26);
+					margin-bottom: 20px;
+					br {
+						display: none;
+						.page-privacy-policy & {
+							display: block;
+						}
+					}
+				}
+				.page-privacy-policy & {
+					margin-bottom: 0;
+				}
+				span {
+					@include fs(18,33);
+					font-weight: bold;
+					margin-bottom: 25px;
+					@include bp(0, 640px) {
+						@include fs(16,26);
+						margin-bottom: 20px;
+						br {
+							display: none;
+						}
+					}
+				}
+			}
+			> li {
+				list-style-type: decimal;
+			}
+		}
+		> ol > li {
+			> ol {
+				counter-reset: list;
+				padding-left: 24px;
+				> li {
+					counter-increment: list;
+					list-style: none;
+					.page-privacy-policy & {
+						margin-bottom: 20px;
+					}
+					&:before {
+						content: "(" counter(list)")";
+						display: inline-block;
+						position: relative;
+						line-height: 14px;
+						text-align: center;
+						font-size: 14px;
+						top: -2px;
+						margin-right: 10px;
+						margin-left: -24px;
+					}
+					> ol {
+						counter-reset: circle-counter;
+						padding-left: 26px;
+						> li {
+							counter-increment: circle-counter;
+							list-style: none;
+							&:before {
+								content: counter(circle-counter);
+								border: 1px solid;
+								width: 15px;
+								height: 15px;
+								display: inline-block;
+								border-radius: 50%;
+								position: relative;
+								line-height: 14px;
+								text-align: center;
+								font-size: 12px;
+								top: -2px;
+								margin-right: 10px;
+								margin-left: -25px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

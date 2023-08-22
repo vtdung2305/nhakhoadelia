@@ -1,0 +1,196 @@
+/* ---- Modal --- */
+.p-modal {
+    visibility: hidden;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    opacity: 0;
+}
+.p-modal.is-open {
+    visibility: visible;
+    z-index: 100;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.68);
+}
+.p-modal__content {
+    position: relative;
+    border: solid 3px #a2a8b1;
+    background: #fff;
+    /* A-5-9 */
+}
+@media (min-width: 769px) {
+    .p-modal__content {
+      width: 640px;
+      min-height: 300px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      padding: 80px 40px;
+    }
+}
+@media (max-width: 768px) {
+    .p-modal__content {
+      width: calc(100% - 20px);
+      top: 15%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -15%);
+      -ms-transform: translate(-50%, -15%);
+      transform: translate(-50%, -15%);
+      padding: 60px 32px 25px;
+    }
+}
+.p-modal__content-message {
+    font-weight: bold;
+    text-align: center;
+}
+@media (min-width: 769px) {
+    .p-modal__content-message {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.688;
+    }
+}
+@media (max-width: 768px) {
+    .p-modal__content-message {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+}
+.p-modal__content-submessage {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    line-height: 1.728;
+}
+.p-modal__content-submessage--hasNoTop {
+    margin-top: 0;
+}
+@media (min-width: 769px) {
+    .p-modal__content-button {
+      margin-top: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+    }
+}
+@media (max-width: 768px) {
+    .p-modal__content-button {
+      margin-top: 13px;
+    }
+}
+@media (min-width: 769px) {
+    .p-modal__content-button .c-button {
+      display: inline-block;
+      margin: 0 5px;
+    }
+}
+@media (max-width: 768px) {
+    .p-modal__content-button .c-button {
+      display: block;
+      width: 170px;
+      font-size: 12px;
+      font-size: 0.75rem;
+      line-height: 1.334;
+      padding: 10px 0;
+    }
+    .p-modal__content-button .c-button:last-child {
+      margin-top: 10px;
+    }
+}
+.p-modal__content-button--inline {
+    text-align: center;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .p-modal__content-button--inline .c-button {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 8px 0;
+    }
+    .p-modal__content-button--inline .c-button:last-child {
+      margin-top: 0;
+    }
+}
+.p-modal__content-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 23px;
+    border-bottom: solid 1px #ececec;
+}
+.p-modal__content-title-name {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.188;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.p-modal__content.has-tbl {
+    padding: 60px 0 40px 0;
+}
+.p-modal__content-table {
+    padding: 0 40px;
+}
+  
+.c-modal-close {
+    position: absolute;
+    right: 30px;
+}
+@media (min-width: 769px) {
+    .c-modal-close {
+      top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .c-modal-close {
+      top: 14px;
+    }
+}
+.c-modal-close-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    color: #a5a5a5;
+    font-weight: bold;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1.25;
+  }
+.c-modal-close-button .c-buttonAction {
+    margin-top: 1px;
+    margin-right: 5px;
+}
+.c-modal-close-button:hover .c-buttonAction {
+    background: #ececec;
+}

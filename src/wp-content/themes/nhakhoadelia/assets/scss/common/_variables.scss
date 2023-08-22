@@ -1,0 +1,66 @@
+// --------------------
+// Global Variables
+// --------------------
+$global-font-size: 14px;
+$global-font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+$font-family-opensan: "Open Sans Condensed", sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+
+
+// --------------------
+// Global Colors
+// --------------------
+$color-font-base: #323232;
+$high-light-gray: #fcfcfc;
+$text-light-gray: #90a4ae;
+$text-gray: #607d8b;
+$text-black: #263238;
+$text-teal: #009688;
+$bg-light-gray: #fafafa;
+$bg-gray: #eee;
+$bg-dark-gray: #757575;
+$bg-light-blue-gray: #eceff1;
+$bg-light-green: #b2ff59;
+$bg-blue: #66cccc;
+$border-light-gray: #e0e0e0;
+$color-red: #cc0000;
+$color-bg-base: #263238;
+$color_green: #035958;
+$color_white: #fff;
+$color_yellow: #e0bd23;
+
+// --------------------
+// Global Font Sizes
+// --------------------
+$font-size-mini: ($global-font-size * 0.714);
+$font-size-tiny: ($global-font-size * 0.785);
+$font-size-small: ($global-font-size * 0.857);
+$font-size-medium: $global-font-size;
+$font-size-large: ($global-font-size * 1.142);
+$font-size-big: ($global-font-size * 1.285);
+$font-size-huge: ($global-font-size * 1.428);
+$font-size-massive: ($global-font-size * 1.714);
+
+// --------------------
+// Component Variables
+// グローバルに使用するもののみ定義。ローカルなものは各コンポーネントに記載
+// --------------------
+// header
+$header-height: 56px;
+
+// sidebar
+$sidebar-width: 20%;
+$sidebar-min-width: 240px;
+$sidebar-max-width: 280px;
+
+// --------------------
+// Z-index master
+// --------------------
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+

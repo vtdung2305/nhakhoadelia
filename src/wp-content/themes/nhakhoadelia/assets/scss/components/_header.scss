@@ -1,0 +1,17 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+// --------------------
+// Header
+// --------------------
+.l-header {
+	position: relative;
+	background-color: $color-green;
+
+	&_inner {
+		padding: 15px 0;
+		.logo {
+			max-width: 170px;
+		}
+	}
+}
