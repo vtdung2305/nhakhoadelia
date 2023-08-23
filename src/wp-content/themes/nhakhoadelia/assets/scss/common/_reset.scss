@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /* ----------------------------------------
  	reset
  ---------------------------------------- */
@@ -112,6 +111,11 @@ a {
   color: $color-font-base;
   text-decoration: none;
   cursor: pointer;
+  @include transition(all 0.5s ease-out);
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 img {
@@ -129,7 +133,7 @@ img {
 body {
   width: 100%;
   color: $color-font-base;
-  font-family: $font-family-roboto;
+  font-family: $font-family-be;
   font-size: 14px;
   line-height: 22px;
   -webkit-text-size-adjust: 100%;

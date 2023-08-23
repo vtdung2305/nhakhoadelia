@@ -11,18 +11,23 @@ body {
 input, button {
     outline: none;
 }
-.container {
-    width: 100%;
-    max-width: 1020px;
-    margin: 0 auto;
-    position: relative;
-    @include bp(769px) {
-        padding: 0 10px;
-    }
-    @include bp(tab) {
-        padding: 0 setvw(30px);
-    }
+
+.l-content {
+    margin-top: 40px;
 }
+
+// .container {
+//     width: 100%;
+//     max-width: 1020px;
+//     margin: 0 auto;
+//     position: relative;
+//     @include bp(769px) {
+//         padding: 0 10px;
+//     }
+//     @include bp(tab) {
+//         padding: 0 setvw(30px);
+//     }
+// }
 .p-flex {
     @include flexbox;
     @include flex-wrap(wrap);
@@ -116,11 +121,6 @@ input, button {
         @include bp(tab) {
             width: 100%;
         }
-    }
-}
-.p-container-fullwidth {
-    .site-main {
-        width: 100%;
     }
 }
 input[type="checkbox"] {

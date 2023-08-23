@@ -1,0 +1,34 @@
+.p-postList {
+  &_title {
+    @include line-clamp(2);
+    
+    @include fs(18, 25);
+    
+    margin-bottom: 5px;
+
+    a {
+      color: $color_green;
+      font-weight: 300;
+    }
+  }
+
+  &_meta {
+    color: $color_green;
+    font-weight: 400;
+    margin-bottom: 5px;
+    
+    @include fs(12, 14);
+  }
+
+  &_excerpt {
+    @include line-clamp(2);
+
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+
+  &_item {
+    padding: 25px 0;
+    border-bottom: 1px solid $border-light-gray;
+  }
+}

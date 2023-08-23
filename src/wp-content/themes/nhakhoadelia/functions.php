@@ -402,7 +402,7 @@ add_filter('fg_post_types', 'add_featured_galleries_to_ctp' );
  */
 function theme_scripts() {
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap/bootstrap.min.css', array(), wp_get_theme()->get( 'Version' ) );
-    wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+    wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700&display=swap');
     wp_enqueue_style( 'swiper-style', get_template_directory_uri() . '/assets/css/swiper.min.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/assets/css/app.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js-jquery/bootstrap/bootstrap.bundle.min.js', array(), '20230124', true );

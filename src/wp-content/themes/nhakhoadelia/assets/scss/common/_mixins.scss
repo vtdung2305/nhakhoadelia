@@ -352,6 +352,13 @@
   }
 }
 
+@mixin line-clamp($line) {
+  display: -webkit-box; /* stylelint-disable-line */
+  overflow: hidden;
+  -webkit-line-clamp: $line; /* stylelint-disable-line */
+  -webkit-box-orient: vertical; /* stylelint-disable-line */
+}
+
 .only-pc {
   @include bp(tab) {
     display: none !important;

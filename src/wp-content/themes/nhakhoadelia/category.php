@@ -8,27 +8,73 @@
 
 get_header(); ?>
 
-<div class="wrap archive-page">
-	<div class="container p-flex p-container-sidebar">
-		<main class="site-main">
-			<section class="area-section">
-				<?php if (have_posts()) : ?>
-				<h2 class="heading-section"><?php single_term_title() ?></h2>
-				<ul class="post-list post-list-cat row">
+<main class="site-main">
+	<div class="p-visual">
+		<div class="d-flex align-items-center p-visual_inner">
+			<div class="container text-center">
+				<h2><?php single_term_title() ?></h2>
+			</div>
+		</div>
+	</div>
 
-					<?php while (have_posts()) : the_post(); 
+	<div class="l-content">
+		<div class="container-lg">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="p-postList">
+						<div class="p-postList_item">
+							<div class="row">
+								<figure class="figure col-sm-6 col-md-5">
+									<a href="#">
+										<img src="https://nhakhoadelia.vn/wp-content/uploads/2022/08/web-01-op2-573x300.jpg" class="figure-img img-fluid rounded" alt="...">
+									</a>
+								</figure>
+								<div class="p-postList_info col-sm-6 col-md-7 d-flex flex-wrap">
+									<h3 class="p-postList_title">
+										<a href="#">Top 5 dòng sứ cao cấp được ưa chuộng nhất năm 2023 – Nha khoa Delia </a>
+									</h3>
+									<div class="p-postList_meta">
+										<span>Tháng Tám 15, 2022 </span>
+									</div>
+									<div class="p-postList_excerpt">
+										<p>Song song với “độ hot” của phương pháp làm đẹp thẩm mỹ răng sứ, là ngày càng có nhiều thương hiệu vật liệu răng sứ được ra mắt trên thị</p>
+									</div>
 
-						get_template_part( 'template-parts/post/content', 'archive' );
+									<a href="#" class="c-btnReadmore">Xem thêm</a>
+								</div>
+							</div>
+						</div>
 
-					 endwhile; ?>
-				</ul>
-				<?php else :
-					get_template_part( 'template-parts/post/content', 'none' );
-				endif; ?>
-			</section>
-			<?php custom_pagination(); ?>
-		</main><!-- #main -->
-		<?php get_sidebar(); ?>
-	</div><!-- #primary -->	
-</div><!-- .wrap -->
+						<div class="p-postList_item">
+							<div class="row">
+								<figure class="figure col-sm-6 col-md-5">
+									<a href="#">
+										<img src="https://nhakhoadelia.vn/wp-content/uploads/2022/08/web-01-op2-573x300.jpg" class="figure-img img-fluid rounded" alt="...">
+									</a>
+								</figure>
+								<div class="p-postList_info col-sm-6 col-md-7 d-flex flex-wrap">
+									<h3 class="p-postList_title">
+										<a href="#">Top 5 dòng sứ cao cấp được ưa chuộng nhất năm 2023 – Nha khoa Delia </a>
+									</h3>
+									<div class="p-postList_meta">
+										<span>Tháng Tám 15, 2022 </span>
+									</div>
+									<div class="p-postList_excerpt">
+										<p>Song song với “độ hot” của phương pháp làm đẹp thẩm mỹ răng sứ, là ngày càng có nhiều thương hiệu vật liệu răng sứ được ra mắt trên thị</p>
+									</div>
+
+									<a href="#" class="c-btnReadmore">Xem thêm</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					Liên hệ để được tư vấn
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
 <?php get_footer();
