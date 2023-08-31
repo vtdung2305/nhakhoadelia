@@ -20,7 +20,7 @@ get_header(); ?>
 	<div class="l-content">
 		<div class="container-lg">
 			<div class="row">
-				<div class="col-md-9">
+				<div class="col-md-8">
 					<div class="p-postList">
 						<div class="p-postList_item">
 							<div class="row">
@@ -69,8 +69,8 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					Liên hệ để được tư vấn
+				<div class="col-md-4">
+					<?php get_sidebar(); ?>
 				</div>
 			</div>
 		</div>

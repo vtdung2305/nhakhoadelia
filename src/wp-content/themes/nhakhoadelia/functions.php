@@ -403,6 +403,7 @@ add_filter('fg_post_types', 'add_featured_galleries_to_ctp' );
 function theme_scripts() {
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap/bootstrap.min.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700&display=swap');
+    wp_enqueue_style( 'fonts-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
     wp_enqueue_style( 'swiper-style', get_template_directory_uri() . '/assets/css/swiper.min.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/assets/css/app.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js-jquery/bootstrap/bootstrap.bundle.min.js', array(), '20230124', true );
@@ -467,7 +468,36 @@ function yoast_seo_robots_remove_search( $robots ) {
 
 add_action('after_setup_theme', 'remove_admin_bar');
 function remove_admin_bar() {
-if (!current_user_can('administrator') && !is_admin()) {
-  show_admin_bar(false);
+    if (!current_user_can('administrator') && !is_admin()) {
+    show_admin_bar(false);
+    }
 }
+
+register_nav_menus(
+    array(
+        'primary' => esc_html__( 'Primary menu', 'nhakhoadelia' ),
+        'footer'  => esc_html__( 'Secondary menu', 'nhakhoadelia' ),
+    )
+);
+
+class My_Walker_Nav_Menu extends Walker_Nav_Menu {
+    function start_lvl(&$output, $depth) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+    }
 }
+
+add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 3 );
+function special_nav_class( $classes, $item, $args ) {
+    if ( 'primary' === $args->theme_location ) {
+        // var_dump($item);
+        $classes[] = 'nav-item';
+    }
+
+    return $classes;
+}
+
+add_filter( 'nav_menu_link_attributes', function($atts) {
+    $atts['class'] = "nav-link";
+    return $atts;
+}, 100, 1 );

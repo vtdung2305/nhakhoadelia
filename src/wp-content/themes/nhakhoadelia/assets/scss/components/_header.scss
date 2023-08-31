@@ -14,4 +14,19 @@
 			max-width: 170px;
 		}
 	}
+
+	@include bp(tab) {
+		position: fixed;
+		width: 100%;
+		z-index: 6;
+		top: 0;
+
+		&_inner {
+			padding: 8px 0;
+
+			.logo {
+				max-width: 120px;
+			}
+		}
+	}
 }

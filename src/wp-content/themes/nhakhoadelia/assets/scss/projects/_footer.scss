@@ -1,0 +1,37 @@
+.p-footer {
+  h2 {
+    @include fs(19, 24);
+
+    color: $color_green;
+    margin-bottom: 10px;
+  }
+
+  i {
+    color: $color_green;
+    padding-right: 5px;
+  }
+
+  &_address {
+    li {
+      padding: 5px 0;
+    }
+  }
+
+  &_logo {
+    margin-bottom: 10px;
+  }
+
+  &_social {
+    column-gap: 10px;
+
+    img {
+      max-width: 50px;
+    }
+  }
+
+  &_service {
+    li {
+      padding: 5px 0;
+    }
+  }
+}
