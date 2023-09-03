@@ -27,6 +27,13 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on Twenty Twenty-One, use a find and replace
+		 * to change 'twentytwentyone' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'twentytwentyone', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -67,7 +74,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		register_nav_menus(
 			array(
 				'primary' => esc_html__( 'Primary menu', 'twentytwentyone' ),
-				'footer'  => esc_html__( 'Secondary menu', 'twentytwentyone' ),
+				'footer'  => __( 'Secondary menu', 'twentytwentyone' ),
 			)
 		);
 
@@ -322,8 +329,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		// Add support for custom line height controls.
 		add_theme_support( 'custom-line-height' );
 
-		// Add support for link color control.
-		add_theme_support( 'link-color' );
+		// Add support for experimental link color control.
+		add_theme_support( 'experimental-link-color' );
 
 		// Add support for experimental cover block spacing.
 		add_theme_support( 'custom-spacing' );
@@ -331,15 +338,12 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		// Add support for custom units.
 		// This was removed in WordPress 5.6 but is still required to properly support WP 5.5.
 		add_theme_support( 'custom-units' );
-
-		// Remove feed icon link from legacy RSS widget.
-		add_filter( 'rss_widget_feed_link', '__return_empty_string' );
 	}
 }
 add_action( 'after_setup_theme', 'twenty_twenty_one_setup' );
 
 /**
- * Registers widget area.
+ * Register widget area.
  *
  * @since Twenty Twenty-One 1.0
  *
@@ -364,7 +368,7 @@ function twenty_twenty_one_widgets_init() {
 add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
 
 /**
- * Sets the content width in pixels, based on the theme's design and stylesheet.
+ * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
@@ -383,12 +387,9 @@ function twenty_twenty_one_content_width() {
 add_action( 'after_setup_theme', 'twenty_twenty_one_content_width', 0 );
 
 /**
- * Enqueues scripts and styles.
+ * Enqueue scripts and styles.
  *
  * @since Twenty Twenty-One 1.0
- *
- * @global bool       $is_IE
- * @global WP_Scripts $wp_scripts
  *
  * @return void
  */
@@ -465,7 +466,7 @@ function twenty_twenty_one_scripts() {
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
 
 /**
- * Enqueues block editor script.
+ * Enqueue block editor script.
  *
  * @since Twenty Twenty-One 1.0
  *
@@ -479,13 +480,12 @@ function twentytwentyone_block_editor_script() {
 add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script' );
 
 /**
- * Fixes skip link focus in IE11.
+ * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
  * thus it does not warrant having an entire dedicated blocking script being loaded.
  *
  * @since Twenty Twenty-One 1.0
- * @deprecated Twenty Twenty-One 1.9 Removed from wp_print_footer_scripts action.
  *
  * @link https://git.io/vWdr2
  */
@@ -496,18 +496,19 @@ function twenty_twenty_one_skip_link_focus_fix() {
 		echo '<script>';
 		include get_template_directory() . '/assets/js/skip-link-focus-fix.js';
 		echo '</script>';
-	} else {
-		// The following is minified via `npx terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
-		?>
-		<script>
-		/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
-		</script>
-		<?php
 	}
+
+	// The following is minified via `npx terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
+	?>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
+	</script>
+	<?php
 }
+add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' );
 
 /**
- * Enqueues non-latin language styles.
+ * Enqueue non-latin language styles.
  *
  * @since Twenty Twenty-One 1.0
  *
@@ -553,7 +554,7 @@ require_once get_template_directory() . '/classes/class-twenty-twenty-one-dark-m
 new Twenty_Twenty_One_Dark_Mode();
 
 /**
- * Enqueues scripts for the customizer preview.
+ * Enqueue scripts for the customizer preview.
  *
  * @since Twenty Twenty-One 1.0
  *
@@ -579,7 +580,7 @@ function twentytwentyone_customize_preview_init() {
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
 
 /**
- * Enqueues scripts for the customizer.
+ * Enqueue scripts for the customizer.
  *
  * @since Twenty Twenty-One 1.0
  *
@@ -598,7 +599,7 @@ function twentytwentyone_customize_controls_enqueue_scripts() {
 add_action( 'customize_controls_enqueue_scripts', 'twentytwentyone_customize_controls_enqueue_scripts' );
 
 /**
- * Calculates classes for the main <html> element.
+ * Calculate classes for the main <html> element.
  *
  * @since Twenty Twenty-One 1.0
  *
@@ -620,7 +621,7 @@ function twentytwentyone_the_html_classes() {
 }
 
 /**
- * Adds "is-IE" class to body if the user is on Internet Explorer.
+ * Add "is-IE" class to body if the user is on Internet Explorer.
  *
  * @since Twenty Twenty-One 1.0
  *
@@ -636,17 +637,3 @@ function twentytwentyone_add_ie_class() {
 	<?php
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
-
-if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
-	/**
-	 * Retrieves the list item separator based on the locale.
-	 *
-	 * Added for backward compatibility to support pre-6.0.0 WordPress versions.
-	 *
-	 * @since 6.0.0
-	 */
-	function wp_get_list_item_separator() {
-		/* translators: Used between list items, there is a space after the comma. */
-		return __( ', ', 'twentytwentyone' );
-	}
-endif;

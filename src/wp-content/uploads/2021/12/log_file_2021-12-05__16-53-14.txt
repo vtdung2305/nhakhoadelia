@@ -1,0 +1,150 @@
+
+---Downloaded files---
+The import files for: Home 1 were successfully downloaded!
+Initial max execution time = 36000
+Files info:
+Site URL = http://delia5.test:81
+Data file = G:\Phanmem\Laragon\www\delia5/wp-content/themes/medinet/sample-data/contents-demo.xml
+Widget file = G:\Phanmem\Laragon\www\delia5/wp-content/themes/medinet/sample-data/widget-settings.json
+Customizer file = G:\Phanmem\Laragon\www\delia5/wp-content/themes/medinet/sample-data/customizer-data.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+right-sidebar : Sidebar does not exist in theme (moving widget to Inactive)
+
+Search - No Title - Imported to Inactive
+Recent Posts - No Title - Imported to Inactive
+Recent Comments - No Title - Imported to Inactive
+
+services-sidebar : Sidebar does not exist in theme (moving widget to Inactive)
+
+Archives - No Title - Imported to Inactive
+Categories - No Title - Imported to Inactive
+Meta - No Title - Imported to Inactive
+
+footer-4 : Sidebar does not exist in theme (moving widget to Inactive)
+
+Custom HTML - No Title - Imported to Inactive
+
+Sidebar : 
+
+Search - Search - Imported
+Medinet Sidebar Posts Image - Recent Post - Imported
+Categories - Categories - Imported
+Tag Cloud - Tags - Imported
+Image - No Title - Imported
+
+Footer 1 : 
+
+Medinet Info - About us - Imported
+
+Footer 2 : 
+
+Medinet Contact Support - No Title - Imported
+
+Footer 3 : 
+
+Medinet Time Schedule - No Title - Imported
+
+Footer Style 2: 1 : 
+
+Medinet Info - About Us - Imported
+
+Footer Style 2: 2 : 
+
+Navigation Menu - Links - Imported
+
+Footer Style 2: 3 : 
+
+Navigation Menu - Department - Imported
+
+Footer Style 2: 4 : 
+
+Medinet Time Schedule - No Title - Imported
+
+Footer Style 3: 1 : 
+
+Navigation Menu - Departments - Imported
+
+Footer Style 3: 2 : 
+
+Medinet Info - No Title - Imported
+Medinet Subscriber - No Title - Imported
+
+Footer Style 3: 3 : 
+
+Medinet Time Schedule - Opening Hours - Imported
+Medinet Subscriber - No Title - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

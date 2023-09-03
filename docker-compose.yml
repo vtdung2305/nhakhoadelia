@@ -45,7 +45,7 @@ services:
       - PMA_HOST=db:3306
       - PMA_USER=wordpress
       - PMA_PASSWORD=wordpress
-      - UPLOAD_LIMIT=300M
+      - UPLOAD_LIMIT=500M
 #    restart: always
     links:
       - db

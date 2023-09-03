@@ -308,36 +308,36 @@ function category_has_children( $term_id = 0, $taxonomy = 'category' ) {
     $children = get_categories( array( 'child_of' => $term_id, 'taxonomy' => $taxonomy ) );
     return ( $children );
 }
-function new_subcategory_hierarchy() {
-    $category = get_queried_object();
+// function new_subcategory_hierarchy() {
+//     $category = get_queried_object();
 
-    $cat_id = $category->cat_ID;
+//     $cat_id = $category->cat_ID;
 
-    $templates = array();
+//     $templates = array();
 
-    if ( category_has_children($cat_id) ) {
-        // Use default values from get_category_template()
-        $templates[] = "category-{$category->slug}.php";
-        $templates[] = "category-{$category->term_id}.php";
-        $templates[] = 'category.php';
-    } else {
-        // Create replacement $templates array
-        $parent = get_category( $parent_id );
+//     if ( category_has_children($cat_id) ) {
+//         // Use default values from get_category_template()
+//         $templates[] = "category-{$category->slug}.php";
+//         $templates[] = "category-{$category->term_id}.php";
+//         $templates[] = 'category.php';
+//     } else {
+//         // Create replacement $templates array
+//         $parent = get_category( $parent_id );
 
-        // Current first
-        $templates[] = "subcategory-{$category->slug}.php";
-        $templates[] = "subcategory-{$category->term_id}.php";
-        $templates[] = "subcategory.php";
+//         // Current first
+//         $templates[] = "subcategory-{$category->slug}.php";
+//         $templates[] = "subcategory-{$category->term_id}.php";
+//         $templates[] = "subcategory.php";
 
-        // Parent second
-        $templates[] = "category-{$parent->slug}.php";
-        $templates[] = "category-{$parent->term_id}.php";
-        $templates[] = 'category.php';
-    }
-    return locate_template( $templates );
-}
+//         // Parent second
+//         $templates[] = "category-{$parent->slug}.php";
+//         $templates[] = "category-{$parent->term_id}.php";
+//         $templates[] = 'category.php';
+//     }
+//     return locate_template( $templates );
+// }
 
-add_filter( 'category_template', 'new_subcategory_hierarchy' );
+// add_filter( 'category_template', 'new_subcategory_hierarchy' );
 
 
 //本文抜粋を取得する関数
@@ -481,7 +481,8 @@ register_nav_menus(
 );
 
 class My_Walker_Nav_Menu extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth) {
+    // function start_lvl(&$output, $depth) {
+        function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
         $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
     }
@@ -490,14 +491,42 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu {
 add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 3 );
 function special_nav_class( $classes, $item, $args ) {
     if ( 'primary' === $args->theme_location ) {
-        // var_dump($item);
+        // print_r($args);
         $classes[] = 'nav-item';
     }
 
     return $classes;
 }
 
-add_filter( 'nav_menu_link_attributes', function($atts) {
+
+function delia_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+
+	// Add [aria-haspopup] and [aria-expanded] to menu items that have children
+	$item_has_children = in_array( 'menu-item-has-children', $item->classes );
     $atts['class'] = "nav-link";
-    return $atts;
-}, 100, 1 );
+	if ( $item_has_children ) {
+		$atts['aria-expanded'] = 'false';
+		$atts['data-bs-toggle'] = 'dropdown';
+        $atts['class'] = "nav-link dropdown-toggle";
+	}
+
+	return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'delia_nav_menu_link_attributes', 10, 4 );
+
+
+/**
+ * Remove category url
+ */
+// function remove_category( $string, $type )  {
+//     if ( $type != 'single' && $type == 'category' && ( strpos( $string, 'category' ) !== false ) ) {
+//         $url_without_category = str_replace( "/category/", "/", $string );
+//         return trailingslashit( $url_without_category );
+//     }
+//     return $string;
+// }
+// add_filter( 'user_trailingslashit', 'remove_category', 100, 2);  
+
+require_once ('inc/post-type.php');
+
+require_once ('inc/taxonomy.php');
