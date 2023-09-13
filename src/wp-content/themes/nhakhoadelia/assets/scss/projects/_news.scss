@@ -1,0 +1,110 @@
+.p-news {
+  @include bp(pc) {
+    padding-top: 95px;
+    // background: #195752 url(../images/common/bg_team.png) no-repeat top center;
+    background: url(../images/common/bg_news.png) no-repeat top center;
+    background-size: cover;
+  // height: 845px;
+  }
+
+  @include bp(tab) {
+    padding-top: 20px;
+    background-color: $color_green;
+  }
+
+  &_list {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 70px 0;
+
+    @include bp(tab) {
+      padding: 20px 0;
+    }
+  }
+
+  &_item {
+    @include bp(pc) {
+      color: $color_green;
+      background-color: rgba($color: $color_white, $alpha: 0.7);
+      box-shadow: 0px 2.81167px 2.81167px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 0px 0px 15px 15px;
+      padding: 18px;
+    }
+
+    @include bp(tab) {
+      color: $color_white;
+      grid-template-columns: 52% 48%;
+      column-gap: 15px;
+      margin-bottom: 15px;
+      align-items: center;
+
+      &_info {
+        order: 2;
+      }
+
+      &_thumb {
+        order: 1;
+      }
+    }
+
+    h3 {
+      font-weight: 700;
+      text-transform: uppercase;
+
+      a {
+        font-weight: 700;
+
+        @include bp(tab) {
+          color: $color_white;
+        }
+      }
+    }
+
+    &:first-child {
+      @include bp(pc) {
+        padding: 25px;
+        column-gap: 45px;
+        margin-bottom: 40px;
+
+        h3 {
+          @include fs(35, 45);
+
+          padding-bottom: 20px;
+        }
+
+        p {
+          @include fs(20, 30);
+
+          text-align: justify;
+          font-weight: 500;
+          padding-bottom: 20px;
+        }
+      }
+
+      @include bp(tab) {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
+    &:not(:first-child) {
+      @include bp(pc) {
+        max-width: 338px;
+        margin-bottom: 40px;
+
+        h3 {
+          @include fs(17, 24);
+          padding: 5px 0;
+        }
+
+        p {
+          @include fs(14, 20);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .c-btnReadmoreNews {
+      margin-bottom: auto;
+    }
+  }
+}

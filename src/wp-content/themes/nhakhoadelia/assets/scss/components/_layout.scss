@@ -13,7 +13,7 @@ input, button {
 }
 
 .l-content {
-    margin-top: 40px;
+    // margin-top: 40px;
 }
 
 .l-footer {
@@ -133,74 +133,74 @@ input, button {
         }
     }
 }
-input[type="checkbox"] {
-    display: none;
-    & + label {
-        padding-left: 25px;
-        position: relative;
-        &:before {
-            content: "";
-            width: 17px;
-            height: 17px;
-            border: 1px solid #b5b5b5;
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 4px;
-        }
-        &:after {
-            content: "";
-            border: 3px solid $color-red;
-            border-top: none;
-            border-right: none;
-            @include transform(rotate(-45deg));
-            position: absolute;
-            left: 5px;
-            top: 4px;
-            width: 15px;
-            height: 9px;
-            opacity: 0;
-        }
-    }
-    &:checked + label:after {
-        opacity: 1;
-    }
-}
-input[type="text"],
-input[type="email"] {
-    background-color: #fff;
-    width: 100%;
-    border: 1px solid #ccc;
-    box-shadow: none;
-    font-weight: bold;
-    font-family: $font-family-opensan;
-    letter-spacing: 1px;
-    padding-left: 11px;
-    height: 45px;
-    @include fs(14,22);
-    border-radius: 3px;
-}
-select {
-    background-color: #fff;
-    width: 100%;
-    border: 1px solid #ccc;
-    height: 45px;
-    @include fs(14,22);
-    border-radius: 3px;
-}
-input[type="submit"] {
-    display: block;
-    width: 250px;
-    border: 0;
-    font-size: 16px;
-    color: #fff;
-    padding: 10px;
-    border-radius: 25px;
-    line-height: 1;
-    height: 50px;
-    margin: 25px auto 0;
-    background-color: #525252;
-}
+// input[type="checkbox"] {
+//     display: none;
+//     & + label {
+//         padding-left: 25px;
+//         position: relative;
+//         &:before {
+//             content: "";
+//             width: 17px;
+//             height: 17px;
+//             border: 1px solid #b5b5b5;
+//             display: inline-block;
+//             position: absolute;
+//             left: 0;
+//             top: 4px;
+//         }
+//         &:after {
+//             content: "";
+//             border: 3px solid $color-red;
+//             border-top: none;
+//             border-right: none;
+//             @include transform(rotate(-45deg));
+//             position: absolute;
+//             left: 5px;
+//             top: 4px;
+//             width: 15px;
+//             height: 9px;
+//             opacity: 0;
+//         }
+//     }
+//     &:checked + label:after {
+//         opacity: 1;
+//     }
+// }
+// input[type="text"],
+// input[type="email"] {
+//     background-color: #fff;
+//     width: 100%;
+//     border: 1px solid #ccc;
+//     box-shadow: none;
+//     font-weight: bold;
+//     font-family: $font-family-opensan;
+//     letter-spacing: 1px;
+//     padding-left: 11px;
+//     height: 45px;
+//     @include fs(14,22);
+//     border-radius: 3px;
+// }
+// select {
+//     background-color: #fff;
+//     width: 100%;
+//     border: 1px solid #ccc;
+//     height: 45px;
+//     @include fs(14,22);
+//     border-radius: 3px;
+// }
+// input[type="submit"] {
+//     display: block;
+//     width: 250px;
+//     border: 0;
+//     font-size: 16px;
+//     color: #fff;
+//     padding: 10px;
+//     border-radius: 25px;
+//     line-height: 1;
+//     height: 50px;
+//     margin: 25px auto 0;
+//     background-color: #525252;
+// }
 .wpcf7 {
     .wpcf7-form {
         > p {
@@ -462,5 +462,12 @@ input[type="submit"] {
     letter-spacing: 2px;
     @include bp(tab) {
         @include fs(24,34);
+    }
+}
+
+.container-lg {
+    @include bp(tab) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

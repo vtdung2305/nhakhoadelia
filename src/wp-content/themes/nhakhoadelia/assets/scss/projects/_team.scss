@@ -1,0 +1,86 @@
+.p-team {
+  @include bp(pc) {
+    padding-top: 87px;
+    // background: #195752 url(../images/common/bg_team.png) no-repeat top center;
+    background: url(../images/common/bg_team.png) no-repeat top center;
+    background-size: cover;
+    height: 845px;
+  }
+
+  @include bp(tab) {
+    padding-top: 30px;
+    background-color: $color_green;
+  }
+
+  &_inner {
+    max-width: 750px;
+    margin: 35px auto;
+  }
+
+  .c-desc {
+    color: $color_white;
+  }
+
+  &_slider {
+    padding-bottom: 35px;
+
+    &_info {
+      text-align: center;
+      margin-top: 15px;
+      color: $color_white;
+
+      font-family: $font-family-barlow;
+
+      h3 {
+        @include fs(20, 26);
+
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      p {
+        @include fs(16, 22);
+
+        font-weight: 500;
+      }
+    }
+
+    .swiper-slide {
+      width: 75%;
+    }
+  }
+
+  .swiper-container {
+    padding-bottom: 70px;
+  }
+
+  .swiper-button-next {
+    background-image: url(../images/common/btn_next.png);
+    right: 50px;
+  }
+
+  .swiper-button-prev {
+    background-image: url(../images/common/btn_prev.png);
+    left: 50px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: 6px;
+    width: 31px;
+    height: 31px;
+    background-size: contain;
+  }
+
+  .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+    opacity: 1;
+    background: $color_white;
+
+    &-active {
+      background: #51E5DF;
+    }
+  }
+}

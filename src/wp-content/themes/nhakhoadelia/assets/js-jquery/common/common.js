@@ -97,6 +97,9 @@
 				e.preventDefault();
 			});
 		},
+		sliderCustomer: function() {
+
+		}
 	}.init());
 
 }(jQuery));

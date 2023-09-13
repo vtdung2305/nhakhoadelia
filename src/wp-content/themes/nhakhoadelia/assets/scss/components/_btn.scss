@@ -6,3 +6,33 @@
   margin-bottom: auto;
   font-weight: 300;
 }
+
+.c-btnReadmoreNews {
+  border-radius: 10px;
+  background-color: $color_green;
+  color: $color_white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 9px 30px;
+  
+  @include fs(25, 30);
+
+  font-weight: 700;
+
+  font-family: $font-family-barlow;
+}
+
+.c-btnSubmit {
+  @include fs(25, 30);
+
+  color: $color_white;
+  background-color: $color-red;
+  padding: 6px 20px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  @include transition()
+
+  &:hover {
+    opacity: .7;
+  }
+}

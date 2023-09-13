@@ -278,7 +278,7 @@ function delia_widgets() {
 }
 add_action( 'widgets_init', 'delia_widgets' );
 
-function custom_trim_excerpt($text = '', $excerpt_length=55) {
+function custom_trim_excerpt($text = '', $excerpt_length = 55) {
     $raw_excerpt = $text;
     if ( '' == $text ) {
         $text = get_the_content('');
@@ -402,11 +402,11 @@ add_filter('fg_post_types', 'add_featured_galleries_to_ctp' );
  */
 function theme_scripts() {
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap/bootstrap.min.css', array(), wp_get_theme()->get( 'Version' ) );
-    wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700&display=swap');
     wp_enqueue_style( 'fonts-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
     wp_enqueue_style( 'swiper-style', get_template_directory_uri() . '/assets/css/swiper.min.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/assets/css/app.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js-jquery/bootstrap/bootstrap.bundle.min.js', array(), '20230124', true );
+    wp_enqueue_script( 'swiper-script', get_template_directory_uri() . '/assets/js-jquery/module/swiper.min.js', array(), '20230124', true );
     wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/js/build/bundle.js', array(), '20230124', true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
@@ -416,12 +416,12 @@ add_action( 'wp_enqueue_scripts', 'theme_scripts' );
  */
 
 function custom_pagination() {
-  //echo '<div class="p-pagination">';
+  echo '<div class="p-pagination">';
     echo the_posts_pagination( array(
       'prev_text' => '&lt;',
       'next_text' => '&gt;',
     ) );
-  //echo '</div><!-- /pagenavi -->';
+  echo '</div><!-- /pagenavi -->';
 }
 
 function template_chooser($template)
@@ -526,6 +526,13 @@ add_filter( 'nav_menu_link_attributes', 'delia_nav_menu_link_attributes', 10, 4 
 //     return $string;
 // }
 // add_filter( 'user_trailingslashit', 'remove_category', 100, 2);  
+
+// Filter except length to 35 words.
+// tn custom excerpt length
+function tn_custom_excerpt_length( $length ) {
+    return 28;
+}
+add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 
 require_once ('inc/post-type.php');
 

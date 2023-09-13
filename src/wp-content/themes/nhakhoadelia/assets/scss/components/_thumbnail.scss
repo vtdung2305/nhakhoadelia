@@ -1,0 +1,10 @@
+.c-postThumbnail {
+  @include bp(pc) {
+    max-height: 185px;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}

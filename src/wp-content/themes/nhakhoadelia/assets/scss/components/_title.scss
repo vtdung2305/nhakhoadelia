@@ -1,0 +1,56 @@
+.c-title {
+  @include fs(39, 54);
+
+  font-weight: bold;
+  color: $color_green;
+  text-transform: uppercase;
+  text-align: center;
+
+  // font-family: $font-family-inter;
+
+  &.white {
+    color: $color_white;
+  }
+
+  @include bp(sp) {
+    @include fs(24, 30)
+  }
+
+  span {
+    @include bp(pc) {
+      font-weight: 700;
+    }
+
+    @include bp(sp) {
+      @include fs(20, 25)
+    }
+  }
+}
+
+.c-titleBig {
+  display: inline-block;
+  @include fs(73, 85);
+
+  font-weight: bold;
+  color: $color_white;
+  text-transform: uppercase;
+  text-align: left;
+
+  font-family: $font-family-inter;
+}
+
+.c-desc {
+  @include fs(20, 30);
+
+  font-weight: 400;
+  font-family: $font-family-inter;
+  text-align: justify;
+
+  &.green {
+    color: $color_green;
+  }
+
+  @include bp(tab) {
+    @include fs(15, 22);
+  }
+}

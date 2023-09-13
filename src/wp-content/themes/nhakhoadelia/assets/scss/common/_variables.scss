@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&family=Barlow:wght@100;500;700&family=Inter:wght@400;700&display=swap');
 // --------------------
 // Global Variables
 // --------------------
@@ -6,6 +7,9 @@ $global-font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Goth
 $font-family-opensan: "Open Sans Condensed", sans-serif;
 $font-family-roboto: 'Roboto', sans-serif;
 $font-family-be: 'Be Vietnam Pro', sans-serif;
+$font-family-barlow: 'Barlow', sans-serif;
+$font-family-barlow-condensed: 'Barlow Condensed', sans-serif;
+$font-family-inter: 'Inter', sans-serif;
 
 
 // --------------------
@@ -19,12 +23,13 @@ $text-black: #263238;
 $text-teal: #009688;
 $bg-light-gray: #fafafa;
 $bg-gray: #eee;
+$bg_gray02: #F6F6F6;
 $bg-dark-gray: #757575;
 $bg-light-blue-gray: #eceff1;
 $bg-light-green: #b2ff59;
 $bg-blue: #66cccc;
 $border-light-gray: #e0e0e0;
-$color-red: #cc0000;
+$color-red: #F00;
 $color-bg-base: #263238;
 $color_green: #035958;
 $color_white: #fff;

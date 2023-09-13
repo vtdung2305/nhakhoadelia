@@ -1,0 +1,103 @@
+.p-customer {
+  @include bp(pc) {
+    background: #fff url(../images/common/bg_customer.png) no-repeat top center;
+    background-size: cover;
+  }
+  
+  &_heading {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 417px;
+    height: 362px;
+    background: url(../images/common/border.png) no-repeat center;
+  }
+
+  &_inner {
+    position: relative;
+    padding-top: 68px;
+
+    @include bp(tab) {
+      padding: 20px 0;
+    }
+  }
+
+  &_list {
+    padding: 65px 0 150px;
+    gap: 26px;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  &_item {
+    background-color: $color_white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    max-width: 221px;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+
+    &.transparent {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &_info {
+      color: $color_green;
+      font-family: $font-family-barlow-condensed;
+      text-align: left;
+      margin-top: 15px;
+      font-weight: 700;
+
+      h3 {
+        text-transform: capitalize;
+        font-weight: 700;
+        @include fs(20, 30);
+
+      }
+
+      .position {
+        @include fs(16, 25);
+        font-weight: 500;
+        padding-right: 10px;
+      }
+      
+      .meta {
+        @include fs(16, 25);
+        font-weight: 700;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &_visual {
+   margin-top: 13px; 
+  }
+
+  &_info {
+    color: $color_green;
+
+    &_ttl {
+      padding-top: 10px;
+      @include fs(24, 30);
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &_meta {
+      padding: 0 20px;
+    }
+
+    p {
+      @include fs(15, 22);
+
+      font-weight: 500;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -14,8 +14,8 @@ get_header();
         <main class="site-main">
 
 	    <?php if (have_posts()) :
-			while (have_posts()) : the_post();
-		?>
+				while (have_posts()) : the_post();
+			?>
 			<div class="page-heading"><h2 class="heading-02"><?php the_title(); ?></h2></div>
 			<div class="article-body">
 				<?php the_content(); ?>

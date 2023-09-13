@@ -32,6 +32,7 @@ get_header(); ?>
 					<?php else :
 						get_template_part( 'template-parts/post/content', 'none' );
 					endif; ?>
+					<?php custom_pagination(); ?>
 				</div>
 				<div class="col-md-4">
 					<?php get_sidebar(); ?>

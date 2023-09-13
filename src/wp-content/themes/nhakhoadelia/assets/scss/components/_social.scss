@@ -1,0 +1,44 @@
+.c-social {
+  display: flex;
+  column-gap: 25px;
+
+  @include bp(pc) {
+    min-height: 60px;
+  }
+
+  @include bp(tab) {
+    margin-top: 10px;
+    padding: 0 10px;
+    column-gap: 15px;
+  }
+
+  li {
+    &::before {
+      content: none !important;
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+
+    @include bp(tab) {
+      width: 25px;
+      height: 25px;
+    }
+
+    &.icon-facebook {
+      background-image: url(../images/icons/icon-facebook.png);
+    }
+
+    &.icon-youtube {
+      background-image: url(../images/icons/icon-youtube.png);
+    }
+
+    &.icon-tiktok {
+      background-image: url(../images/icons/icon-tiktok.png);
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.p-house {
+  @include bp(pc) {
+    padding: 87px 0 72px;
+    background: url(../images/common/bg_house.png) no-repeat top center;
+    background-size: cover;
+  // height: 845px;
+  }
+
+  @include bp(tab) {
+    .container-lg {
+      padding: 23px 20px 34px;
+      &.green {
+        background-color: $color_green;
+      }
+    }
+  }
+
+  &_inner {
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  &_group {
+    margin-top: 60px;
+  }
+
+  &_block {
+    column-gap: 60px;
+    margin-bottom: 107px;
+    color: $color_white;
+    
+    &_info {
+      font-family: $font-family-inter;
+      
+      p {
+        @include fs(19, 26);
+
+        font-weight: 500;
+        text-align: center;
+
+        &:not(:last-child) {
+          padding-bottom: 40px;
+        }
+        
+      }
+
+      span {
+        @include fs(30, 26);
+
+        font-weight: 700;
+      }
+
+      .desc {
+        padding-top: 10px;
+        @include fs(25, 35);
+
+        text-align: justify;
+
+        font-family: $font-family-barlow;
+        font-weight: 400;;
+      }
+    }
+
+    &_thumb {
+      max-width: 699px;
+    }
+
+    .caption {
+      display: block;
+      text-align: center;
+      padding-top: 15px;
+
+      @include fs(20, 25);
+    }
+  }
+
+  &_visual {
+    margin: 30px 0;
+  }
+
+  &_statistic {
+    border-radius: 14px;
+    background: rgba(205, 205, 205, 0.19);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: $color_white;
+    padding: 17px;
+    max-width: 304px;
+    margin: 0 auto;
+
+    p {
+      @include fs(13, 20);
+
+      font-weight: 500;
+      text-transform: uppercase;
+      span {
+        @include fs(20, 25);
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  .c-desc {
+    padding-top: 16px;
+  }
+
+  &_item {
+    display: grid;
+    grid-template-columns: 52% 48%;
+    margin-bottom: 8px;
+
+    &:nth-child(2) {
+      grid-template-columns: 48% 52%;
+    }
+
+    &_txt {
+      background-color: $bg_gray02;
+      padding: 17px;
+      @include fs(11, 20);
+
+      color: $color_green;
+      font-weight: 500;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
