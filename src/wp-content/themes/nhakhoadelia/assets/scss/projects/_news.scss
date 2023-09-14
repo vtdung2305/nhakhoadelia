@@ -90,6 +90,7 @@
       @include bp(pc) {
         max-width: 338px;
         margin-bottom: 40px;
+        width: calc(100% / 3.1);
 
         h3 {
           @include fs(17, 24);

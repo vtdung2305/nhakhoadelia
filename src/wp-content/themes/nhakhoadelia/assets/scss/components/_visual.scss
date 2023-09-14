@@ -1,0 +1,29 @@
+.c-visual {
+  height: 452px;
+  background: url(../images/common/thumv-1-min.webp) no-repeat center;
+  transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+  position: relative;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba($color: $color_green, $alpha: 0.5);
+    z-index: 1;
+  }
+
+  &_inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  h2 {
+    color: $color_white;
+    font-size: 70px;
+    font-weight: 600;
+  }
+}

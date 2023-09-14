@@ -15,29 +15,20 @@ $cat_id = $category[0]->cat_ID;
 $cat_name = $category[0]->name;
 
 ?>
-	<div class="article-head">
-		<div class="post-meta">
-			<p class="post-cat"><a href="<?php echo get_category_link($cat_id);?>"><i class="c-icon c-icon-cat"></i><?php echo $cat_name;?></a></p>
-			<h1 class="post-title"><?php the_title(); ?></h1>
-			<p class="post-date"><?php echo get_the_date();?></p>
+	<div class="p-post">
+		<h2 class="p-post_title"><?php the_title(); ?></h2>
+		<div class="p-post_meta d-flex">
+			<span class="p-post_cat">
+				<a href="<?php echo get_category_link($cat_id); ?>"><i class="fa-solid fa-tag"></i><?php echo $cat_name;?></a>
+			</span>
+			<span class="p-post_date"><i class="fa-solid fa-calendar-days"></i><?php echo get_the_date();?></span>
+			<span class="p-post_user"><i class="fa-solid fa-user"></i><?php echo get_the_author();?></span>
 		</div>
-
-		<?php if($taxs): ?>
-		<ul class="post-tags">
-			<?php
-                foreach ($taxs as $tax) {
-                    $tax_link = get_term_link($tax);
-            ?>
-                <li class="p-tags_tag"><a href="<?php echo $tax_link;?>"><?php echo $tax->name; ?></a></li>
-                <?php  } ?>
-        </ul>
-    	<?php endif; ?>
-
 	</div>
 
 	<div class="post-img"><?php //echo delia_get_the_main_image( get_the_ID() ); ?></div>
 
-	<div class="article-body">
+	<div class="p-post_content">
 		<?php
 			if ( is_single() ) {
 				global $more;
@@ -56,4 +47,15 @@ $cat_name = $category[0]->name;
 
 		?>
 	</div>
+
+	<?php if($taxs): ?>
+		<ul class="p-post_tags">
+			<?php
+				foreach ($taxs as $tax) {
+				$tax_link = get_term_link($tax);
+			?>
+				<li class="p-tags_tag"><a href="<?php echo $tax_link;?>"><?php echo $tax->name; ?></a></li>
+			<?php } ?>
+		</ul>
+	<?php endif; ?>
 	

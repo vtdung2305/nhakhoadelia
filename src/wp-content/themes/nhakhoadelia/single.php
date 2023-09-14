@@ -6,30 +6,37 @@
  * @subpackage delia
  */
 
-get_header();
+get_header(); ?>
 
-?>
-	<div class="wrap single-post">
-		<div class="container p-flex p-container-sidebar ">
-			<main class="site-main">
-				<section class="p-content_page_single">
+<main class="site-main">
+	<div class="c-visual">
+		<div class="c-visual_inner h-100 d-flex align-items-center justify-content-center">
+			<h2>Tin Tức</h2>
+		</div>
+	</div>
+
+	<div class="l-content">
+		<div class="container-lg">
+			<div class="row">
+				<div class="col-md-8">
 					<?php if (have_posts()) : ?>
-
-						<?php while (have_posts()) : the_post();
+						<div class="p-postList">
+							<?php while (have_posts()) : the_post(); 
 
 							get_template_part( 'template-parts/post/content', 'single' );
 
-						 endwhile; ?>
-
+							endwhile; ?>
+						</div>
 					<?php else :
-						get_template_part( 'content', 'none' );
+						get_template_part( 'template-parts/post/content', 'none' );
 					endif; ?>
-				</section>
-				<?php if ( function_exists( 'echo_crp' ) ) { echo_crp(); } ?>
-			</main><!-- #main -->
-			<?php get_sidebar(); ?>
+				</div>
+				<div class="col-md-4">
+					<?php get_sidebar(); ?>
+				</div>
+			</div>
 		</div>
-	</div><!-- #primary -->
+	</div>
+</main>
 
-<?php
-get_footer(); ?>
+<?php get_footer(); ?>

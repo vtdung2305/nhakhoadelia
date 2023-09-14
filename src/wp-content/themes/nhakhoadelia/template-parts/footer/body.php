@@ -29,7 +29,7 @@
 						<a href="<?php echo get_site_url() ?>/bao-hanh">Tra cứu thông tin bảo hành</a>
 					</li>
 				</ul>
-				<ul class="c-social">
+				<ul class="c-social only-pc">
 					<li>
 						<a href="#">
 							<span class="icon-facebook"></span>
@@ -87,6 +87,23 @@
 						</li>
 					</ul>
 				</div>
+				<ul class="c-social only-sp">
+					<li>
+						<a href="#">
+							<span class="icon-facebook"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon-youtube"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon-tiktok"></span>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

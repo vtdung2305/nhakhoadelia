@@ -458,46 +458,36 @@ get_header();
                   <div class="c-form_group">
                     <input type="text" name="name" class="c-inputField" placeholder="Họ và tên">
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="c-form_group">
-                    <select name="" class="c-selectField">
-                      <option value="">Chọn cơ sở</option>
-                      <option value="1">Cơ sở 1</option>
-                      <option value="2">Cơ sở 2</option>
-                      <option value="3">Cơ sở 3</option>
-                      <option value="4">Cơ sở 4</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="col-md-6">
                   <div class="c-form_group">
                     <input type="text" name="phone" class="c-inputField" placeholder="Số điện thoại">
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="c-form_group">
-                    <select name="" class="c-selectField">
-                      <option value="">Chọn cơ sở</option>
-                      <option value="1">Cơ sở 1</option>
-                      <option value="2">Cơ sở 2</option>
-                      <option value="3">Cơ sở 3</option>
-                      <option value="4">Cơ sở 4</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="col-md-6">
                   <div class="c-form_group">
                     <textarea name="status" class="c-textField" cols="30" rows="10" placeholder="Tình trạng"></textarea>
                   </div>
                 </div>
                 <div class="col-md-6">
+                  <div class="c-form_group">
+                    <select name="" class="c-selectField">
+                      <option value="">Chọn cơ sở</option>
+                      <option value="1">Cơ sở 1</option>
+                      <option value="2">Cơ sở 2</option>
+                      <option value="3">Cơ sở 3</option>
+                      <option value="4">Cơ sở 4</option>
+                    </select>
+                  </div>
+
+                  <div class="c-form_group">
+                    <select name="" class="c-selectField">
+                      <option value="">Chọn cơ sở</option>
+                      <option value="1">Cơ sở 1</option>
+                      <option value="2">Cơ sở 2</option>
+                      <option value="3">Cơ sở 3</option>
+                      <option value="4">Cơ sở 4</option>
+                    </select>
+                  </div>
+
                   <div class="c-form_action d-flex flex-wrap justify-content-center">
                     <div class="c-form_button">
                       <button class="c-btnSubmit">Đăng ký ngay</button>

@@ -76,6 +76,10 @@
 
   &_visual {
     margin: 30px 0;
+
+    img {
+      width: 100%;
+    }
   }
 
   &_statistic {
@@ -126,6 +130,12 @@
 
       span {
         font-weight: 700;
+      }
+    }
+
+    &_img {
+      img {
+        width: 100%;
       }
     }
   }

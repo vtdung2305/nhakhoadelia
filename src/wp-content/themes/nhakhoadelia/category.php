@@ -9,11 +9,9 @@
 get_header(); ?>
 
 <main class="site-main">
-	<div class="p-visual">
-		<div class="d-flex align-items-center p-visual_inner">
-			<div class="container text-center">
-				<h2><?php single_term_title() ?></h2>
-			</div>
+	<div class="c-visual">
+		<div class="c-visual_inner h-100 d-flex align-items-center justify-content-center">
+			<h2><?php single_term_title() ?></h2>
 		</div>
 	</div>
 

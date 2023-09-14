@@ -84,7 +84,12 @@
   }
   
   @include bp(tab) {
-    padding: 25px 40px;
+    padding: 25px 20px;
+
+    &_logo {
+      padding-top: 30px;
+    }
+
     &_rows {
       flex-direction: row;
       flex-wrap: wrap;
@@ -117,6 +122,24 @@
           a {
           @include fs(13, 20);
           }
+        }
+      }
+    }
+
+    .row {
+      row-gap: 30px;
+    }
+
+    h3 {
+      margin-bottom: 3px;
+      @include fs(15, 20);
+    }
+
+    ul {
+      li {
+        padding: 4px 0;
+        a {
+          @include fs(15, 20);
         }
       }
     }

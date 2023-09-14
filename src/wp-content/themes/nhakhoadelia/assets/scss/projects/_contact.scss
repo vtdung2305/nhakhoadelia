@@ -1,7 +1,24 @@
 .p-contact {
-  padding: 128px 0 100px;
-  background: #025955 url(../images/common/bg_contact.png) no-repeat top center;
-  background-size: cover;
+  @include bp(pc) {
+    padding: 128px 0 100px;
+    background: #025955 url(../images/common/bg_contact.png) no-repeat top center;
+    background-size: cover;
+  }
+
+  @include bp(tab) {
+    margin-top: 20px;
+    padding: 0 20px;
+
+    .container-lg {
+      background-color: $color_green;
+      padding: 30px 20px;
+      border-radius: 60px 0px;
+    }
+
+    .c-title {
+      @include fs(20, 26);
+    }
+  }
 
   &_inner {
     max-width: 720px;
@@ -10,6 +27,10 @@
 
   &_form {
     margin-top: 60px;
+
+    @include bp(tab) {
+      margin-top: 30px;
+    }
   }
 
   .c-form_button {
@@ -18,5 +39,9 @@
 
   .c-form_action {
     padding-top: 80px;
+
+    @include bp(tab) {
+      padding-top: 22px;
+    }
   }
 }

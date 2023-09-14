@@ -3,6 +3,10 @@
 
   &_group {
     margin-bottom: 25px;
+
+    @include bp(tab) {
+      margin-bottom: 15px;
+    }
   }
 
   &_note {
@@ -10,7 +14,6 @@
     font-style: italic;
     font-weight: 400;
     color: $color_white;
-    letter-spacing: 0.5px;
   }
 }
 
