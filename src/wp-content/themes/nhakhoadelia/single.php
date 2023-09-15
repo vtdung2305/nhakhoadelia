@@ -12,6 +12,7 @@ get_header(); ?>
 	<div class="c-visual">
 		<div class="c-visual_inner h-100 d-flex align-items-center justify-content-center">
 			<h2>Tin Tức</h2>
+			
 		</div>
 	</div>
 
@@ -22,8 +23,9 @@ get_header(); ?>
 					<?php if (have_posts()) : ?>
 						<div class="p-postList">
 							<?php while (have_posts()) : the_post(); 
+							$post_name = get_post_type( get_the_ID() ) === 'post' ? 'single' : 'service';
 
-							get_template_part( 'template-parts/post/content', 'single' );
+							get_template_part( 'template-parts/post/content', $post_name );
 
 							endwhile; ?>
 						</div>

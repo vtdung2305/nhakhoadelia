@@ -8,27 +8,35 @@
 get_header();
  ?>
 
-<div class="wrap single-page">
-    <div class="container">
-    
-        <main class="site-main">
+<main class="site-main">
+	<div class="c-visual">
+		<div class="c-visual_inner h-100 d-flex align-items-center justify-content-center">
+			<h2><?php the_title(); ?></h2>
+		</div>
+	</div>
 
-	    <?php if (have_posts()) :
-				while (have_posts()) : the_post();
-			?>
-			<div class="page-heading"><h2 class="heading-02"><?php the_title(); ?></h2></div>
-			<div class="article-body">
-				<?php the_content(); ?>
+	<div class="l-content">
+		<div class="container-lg">
+			<div class="row">
+				<div class="col-md-8">
+					<?php if (have_posts()) : ?>
+						<div class="p-postList">
+							<?php while (have_posts()) : the_post(); 
+
+								get_template_part( 'template-parts/page/content', 'single' );
+
+							endwhile; ?>
+						</div>
+					<?php else :
+						get_template_part( 'template-parts/page/content', 'none' );
+					endif; ?>
+				</div>
+				<div class="col-md-4">
+					<?php get_sidebar(); ?>
+				</div>
 			</div>
-		
-		<?php endwhile; ?>
-		<?php else :
-			get_template_part( 'template-parts/post/content', 'none' );
-        endif; ?>
+		</div>
+	</div>
+</main>
 
-        </main>
-	</div>	
-</div>
-
-<?php
-get_footer(); ?>
+<?php get_footer(); ?>

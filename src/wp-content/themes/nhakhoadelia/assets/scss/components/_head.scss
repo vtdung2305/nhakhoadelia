@@ -1,0 +1,22 @@
+.c-head {
+  padding: 50px 0;
+  &_ttl {
+    color: $color_green;
+    @include fs(50, 70);
+
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: $font-family-inter;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 1px;
+      background-color: $color_green;
+      margin: 10px auto;
+    }
+  }
+}

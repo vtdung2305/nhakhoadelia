@@ -506,7 +506,7 @@ function delia_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
     $atts['class'] = "nav-link";
 	if ( $item_has_children ) {
 		$atts['aria-expanded'] = 'false';
-		$atts['data-bs-toggle'] = 'dropdown';
+		$atts['data-bs-toggle'] = 'collapse';
         $atts['class'] = "nav-link dropdown-toggle";
 	}
 

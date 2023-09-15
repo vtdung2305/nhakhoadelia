@@ -1,5 +1,7 @@
 .p-sidebar {
-  padding: 0 20px;
+  @include bp(pc) {
+    padding: 0 20px;
+  }
 
   h2 {
     @include fs(24, 30);
@@ -28,4 +30,6 @@
     box-shadow: 0 8px 16px 0 rgba(200,183,255,.2);
     margin-bottom: 40px;
   }
+
+  
 }

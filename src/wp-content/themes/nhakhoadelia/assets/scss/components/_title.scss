@@ -12,7 +12,7 @@
     color: $color_white;
   }
 
-  @include bp(sp) {
+  @include bp(tab) {
     @include fs(24, 30)
   }
 
@@ -21,7 +21,7 @@
       font-weight: 700;
     }
 
-    @include bp(sp) {
+    @include bp(tab) {
       @include fs(20, 25)
     }
   }

@@ -26,4 +26,13 @@
     font-size: 70px;
     font-weight: 600;
   }
+
+  @include bp(tab) {
+    height: 250px;
+    background-size: cover;
+
+    h2 {
+      font-size: 40px;
+    }
+  }
 }

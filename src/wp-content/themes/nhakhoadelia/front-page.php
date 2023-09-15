@@ -11,7 +11,7 @@ get_header();
   <div class="l-content">
     <!--section visual-->
     <section class="p-visual">
-      <div class="p-visual_inner">
+      <div class="p-visual_inner c-animation">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-pc.png" class="only-pc" alt="kiến tạo nụ cười">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-sp.png" class="only-sp" alt="kiến tạo nụ cười">
       </div>
@@ -21,31 +21,31 @@ get_header();
     <!--section services-->
     <section class="p-services">
       <div class="container-lg">
-        <h2 class="c-title">dịch vụ nổi bật<br class="only-sp"> <span>tại delia</span></h2>
+        <h2 class="c-title c-animation">dịch vụ nổi bật<br class="only-sp"> <span>tại delia</span></h2>
         <div class="p-services_group">
           <div class="row justify-content-between">
-            <div class="col-md-6 p-services_group_item">
-              <a href="#">
+            <div class="col-md-6 p-services_group_item c-animation fade-left">
+              <a href="<?php echo get_site_url() ?>/dich-vu/boc-rang-su/">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-01.png" alt="bọc răng sử">
               </a>
             </div>
 
-            <div class="col-md-6 p-services_group_item">
-              <a href="#">
+            <div class="col-md-6 p-services_group_item c-animation fade-right">
+              <a href="<?php echo get_site_url() ?>/dich-vu/dan-su-verneer/">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-02.png" alt="dán sứ veneer">
               </a>
             </div>
           </div>
 
           <div class="row justify-content-between">
-            <div class="col-md-6 p-services_group_item">
-              <a href="#">
+            <div class="col-md-6 p-services_group_item c-animation fade-left">
+              <a href="<?php echo get_site_url() ?>/dich-vu/trong-rang-implant/">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-03.png" alt="trồng năng implant">
               </a>
             </div>
 
-            <div class="col-md-6 p-services_group_item">
-              <a href="#">
+            <div class="col-md-6 p-services_group_item c-animation fade-right">
+              <a href="<?php echo get_site_url() ?>/dich-vu/nieng-rang/">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service-04.png" alt="niềng răng">
               </a>
             </div>
@@ -58,9 +58,9 @@ get_header();
     <!--section team-->
     <section class="p-team">
       <div class="container-lg">
-        <h2 class="c-title white">Đội ngũ bác sĩ hàng đầu</h2>
+        <h2 class="c-title white c-animation">Đội ngũ bác sĩ hàng đầu</h2>
         <div class="p-team_inner">
-          <p class="c-desc only-pc">Với sứ mệnh kiến tạo hàng triệu nụ cười rạng rỡ cho người Việt, hệ thống Nha Khoa Delia  luôn cố gắng và nỗ lực hết mình trong công cuộc thu hút nhân tài nha khoa đầu ngành, có tay nghề giỏi, kinh nghiệm chuyên sâu trong lĩnh vực răng hàm mặt ở cả trong và ngoài nước.</p>
+          <p class="c-desc only-pc c-animation fade-bottom">Với sứ mệnh kiến tạo hàng triệu nụ cười rạng rỡ cho người Việt, hệ thống Nha Khoa Delia  luôn cố gắng và nỗ lực hết mình trong công cuộc thu hút nhân tài nha khoa đầu ngành, có tay nghề giỏi, kinh nghiệm chuyên sâu trong lĩnh vực răng hàm mặt ở cả trong và ngoài nước.</p>
           <div class="p-team_slider only-sp">
             <!-- Slider main container -->
             <div class="swiper-container">
@@ -117,14 +117,14 @@ get_header();
     <!--section customer-->
     <section class="p-customer">
       <div class="container-lg">
-        <h2 class="c-title only-sp">câu chuyện khách hàng</h2>
+        <h2 class="c-title only-sp c-animation fade-left">câu chuyện khách hàng</h2>
         <div class="p-customer_inner">
-          <div class="p-customer_heading only-pc">
+          <div class="p-customer_heading only-pc c-animation fade-left">
             <h2><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/heading-customer.png" alt="câu chuyện khách hàng"></h2>
           </div>
           <div class="p-customer_list d-flex flex-wrap justify-content-end only-pc">
             <div class="p-customer_item transparent"></div>
-            <div class="p-customer_item">
+            <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-01.png" alt="">
               </div>
@@ -144,7 +144,7 @@ get_header();
               </div>
             </div>
 
-            <div class="p-customer_item">
+            <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-02.png" alt="">
               </div>
@@ -164,7 +164,7 @@ get_header();
               </div>
             </div>
 
-            <div class="p-customer_item">
+            <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-03.png" alt="">
               </div>
@@ -184,7 +184,7 @@ get_header();
               </div>
             </div>
 
-            <div class="p-customer_item">
+            <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-04.png" alt="">
               </div>
@@ -204,7 +204,7 @@ get_header();
               </div>
             </div>
 
-            <div class="p-customer_item">
+            <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-05.png" alt="chị bảo ngọc">
               </div>
@@ -224,7 +224,7 @@ get_header();
               </div>
             </div>
 
-            <div class="p-customer_item">
+            <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-06.png" alt= "chị trịnh hằng">
               </div>
@@ -244,7 +244,7 @@ get_header();
               </div>
             </div>
 
-            <div class="p-customer_item">
+            <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-07.png" alt="chị nguyễn t.linh">
               </div>
@@ -265,7 +265,7 @@ get_header();
             </div>
           </div>
           <div class="p-customer_group only-sp">
-            <ul class="d-flex justify-content-between">
+            <ul class="d-flex justify-content-between c-animation">
               <li>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-01.png" alt="chị nghiêm ngọc">
               </li>
@@ -288,10 +288,10 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-07.png" alt="chị nghiêm ngọc">
               </li>
             </ul>
-            <div class="p-customer_visual">
+            <div class="p-customer_visual c-animation">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-visual.png" alt="">
             </div>
-            <div class="p-customer_info">
+            <div class="p-customer_info c-animation">
               <h3 class="p-customer_info_ttl">Chị Nghiêm Ngọc</h3>
               <ul class="p-customer_info_meta">
                 <li>
@@ -311,11 +311,11 @@ get_header();
     <!--section house-->
     <section class="p-house">
       <div class="container-lg green">
-        <h2 class="c-titleBig white only-pc">NGÔI NHÀ CỦA<br>NHỮNG NỤ CƯỜI</h2>
-        <h2 class="c-title white only-sp">nha khoa delia<br><span>ngôi nhà của những nụ cười</span></h2>
+        <h2 class="c-titleBig white only-pc c-animation">NGÔI NHÀ CỦA<br>NHỮNG NỤ CƯỜI</h2>
+        <h2 class="c-title white only-sp c-animation">nha khoa delia<br><span>ngôi nhà của những nụ cười</span></h2>
         <div class="p-house_inner">
           <div class="p-house_group only-pc">
-            <div class="p-house_block d-flex align-items-center">
+            <div class="p-house_block d-flex align-items-center c-animation fade-left">
               <div class="p-house_block_thumb">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/house/house-01.png" alt="">
               </div>
@@ -326,7 +326,7 @@ get_header();
               </div>
             </div>
 
-            <div class="p-house_block d-flex">
+            <div class="p-house_block d-flex c-animation fade-right">
               <div class="p-house_block_thumb flex-shrink-0 order-2">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/house/house-02.png" alt="">
                 <span class="caption">Chất lượng tốt nhất như người nhà: Cam kết tư vấn giải pháp bảo vệ tối đa sức khoẻ răng nướu và phù hợp nhất.</span>
@@ -338,11 +338,11 @@ get_header();
           </div>
 
           <div class="only-sp">
-            <div class="p-house_visual">
+            <div class="p-house_visual c-animation">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/house/house-visual.png" alt="nha khoa delia ngôi nhà của những nụ cười">
             </div>
 
-            <div class="p-house_statistic">
+            <div class="p-house_statistic c-animation fade-bottom">
               <p>Kiến tạo <span>+50.000</span> nụ cười</p>
               <p><span>Điểm tựa chăm sóc</span><br>răng miệng của sao Việt</p>
               <p><span>Hệ thống Dental Spa 5 sao</span><br>hàng đầu Việt Nam</p>
@@ -352,10 +352,10 @@ get_header();
       </div>
 
       <div class="container-lg white only-sp">
-        <h2 class="c-title only-sp">NGÔI NHÀ CỦA NHỮNG NỤ CƯỜI</h2>
-        <p class="c-desc green text-justify">Tiên phong với sứ mệnh kiến tạo hàng triệu NỤ CƯỜI HẠNH PHÚC TRỌN VẸN cho người Việt, Delia - nơi bạn được chăm sóc như “NGƯỜI 1 NHÀ.</p>
+        <h2 class="c-title only-sp c-animation">NGÔI NHÀ CỦA NHỮNG NỤ CƯỜI</h2>
+        <p class="c-desc green text-justify c-animation">Tiên phong với sứ mệnh kiến tạo hàng triệu NỤ CƯỜI HẠNH PHÚC TRỌN VẸN cho người Việt, Delia - nơi bạn được chăm sóc như “NGƯỜI 1 NHÀ.</p>
         <div class="p-house_news">
-          <div class="p-house_item">
+          <div class="p-house_item c-animation fade-right">
             <div class="p-house_item_txt d-flex align-items-center h-full">
               <p><span>Chất lượng tốt nhất như người nhà: </span>Cam kết tư vấn giải pháp bảo vệ tối đa sức khoẻ răng nướu và phù hợp nhất.</p>
             </div>
@@ -364,7 +364,7 @@ get_header();
             </div>
           </div>
 
-          <div class="p-house_item">
+          <div class="p-house_item c-animation fade-left">
             <div class="p-house_item_txt d-flex align-items-center h-full order-2">
               <p><span>Thư giãn thoải mái như ở nhà: </span>Delia luôn thấu hiểu để mang tới cho Quý khách những trải nghiệm nha khoa êm ái nhất.</p>
             </div>
@@ -373,7 +373,7 @@ get_header();
             </div>
           </div>
 
-          <div class="p-house_item">
+          <div class="p-house_item c-animation fade-right">
             <div class="p-house_item_txt d-flex align-items-center h-full">
               <p><span>Chăm sóc tận tình như người nhà: </span>Bác sĩ – chuyên gia chăm sóc Quý khách hàng 1-1 xuyên suốt liệu trình tới “TRỌN ĐỜI”</p>
             </div>
@@ -389,10 +389,10 @@ get_header();
     <!--section news-->
     <section class="p-news">
       <div class="container-lg">
-        <h2 class="c-title only-pc">Kiến thức nha khoa - tin tức</h2>
-        <h2 class="c-title white only-sp">Kiến thức nha khoa - tin tức</h2>
+        <h2 class="c-title only-pc c-animation">Kiến thức nha khoa - tin tức</h2>
+        <h2 class="c-title white only-sp c-animation">Kiến thức nha khoa - tin tức</h2>
         <div class="p-news_list d-flex flex-wrap justify-content-between">
-          <div class="p-news_item d-grid d-md-flex">
+          <div class="p-news_item d-grid d-md-flex c-animation">
             <div class="p-news_item_info">
               <h3 class="p-news_item_ttl">Các dáng răng sứ đẹp</h3>
               <p class="p-news_item_excerpt">Nhu cầu bọc răng sứ thẩm mỹ đang ngày tăng cao. Đây là phương pháp làm đẹp cho hàm răng được nhiều người ưa thích. Nó giúp khắc phục được các khuyết điểm: răng xỉn màu, thưa, sứt mẻ, hô và lệch lạc nhẹ… Bạn có biết các dáng răng sứ đẹp và phù hợp khuôn mặt không? Tìm hiểu qua bài viết sau đây của Nha Khoa Delia nhé!</p>
@@ -404,7 +404,7 @@ get_header();
               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news-01.png" alt="">
             </div>
           </div>
-          <div class="p-news_item d-grid d-md-flex flex-wrap-reverse">
+          <div class="p-news_item d-grid d-md-flex flex-wrap-reverse c-animation">
             <div class="p-news_item_info">
               <h3 class="p-news_item_ttl"><a href="#">các bệnh lý khác</a></h3>
               <p class="p-news_item_excerpt">Tiêu xương chân răng là gì? Niềng răng có bị tiêu xương không?</p>
@@ -415,7 +415,7 @@ get_header();
               </a>
             </div>
           </div>
-          <div class="p-news_item d-grid d-md-flex flex-wrap-reverse">
+          <div class="p-news_item d-grid d-md-flex flex-wrap-reverse c-animation">
             <div class="p-news_item_info">
               <h3 class="p-news_item_ttl">
                 <a href="#">bọc răng sứ</a>
@@ -428,7 +428,7 @@ get_header();
               </a>
             </div>
           </div>
-          <div class="p-news_item d-grid d-md-flex flex-wrap-reverse">
+          <div class="p-news_item d-grid d-md-flex flex-wrap-reverse c-animation">
             <div class="p-news_item_info">
               <h3 class="p-news_item_ttl">
                 <a href="#">làm răng sứ</a>
@@ -449,26 +449,26 @@ get_header();
     <!--section contact-->
     <section class="p-contact">
       <div class="container-lg">
-        <h2 class="c-title white">Liên hệ trực tiếp<br>Đăng ký ngay để được tư vấn</h2>
+        <h2 class="c-title white c-animation">Liên hệ trực tiếp<br>Đăng ký ngay để được tư vấn</h2>
         <div class="p-contact_inner">
           <div class="p-contact_form">
             <div class="c-form">
               <div class="row">
                 <div class="col-md-6">
-                  <div class="c-form_group">
+                  <div class="c-form_group c-animation">
                     <input type="text" name="name" class="c-inputField" placeholder="Họ và tên">
                   </div>
 
-                  <div class="c-form_group">
+                  <div class="c-form_group c-animation">
                     <input type="text" name="phone" class="c-inputField" placeholder="Số điện thoại">
                   </div>
 
-                  <div class="c-form_group">
+                  <div class="c-form_group c-animation">
                     <textarea name="status" class="c-textField" cols="30" rows="10" placeholder="Tình trạng"></textarea>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="c-form_group">
+                  <div class="c-form_group c-animation">
                     <select name="" class="c-selectField">
                       <option value="">Chọn cơ sở</option>
                       <option value="1">Cơ sở 1</option>
@@ -478,7 +478,7 @@ get_header();
                     </select>
                   </div>
 
-                  <div class="c-form_group">
+                  <div class="c-form_group c-animation">
                     <select name="" class="c-selectField">
                       <option value="">Chọn cơ sở</option>
                       <option value="1">Cơ sở 1</option>
@@ -488,7 +488,7 @@ get_header();
                     </select>
                   </div>
 
-                  <div class="c-form_action d-flex flex-wrap justify-content-center">
+                  <div class="c-form_action d-flex flex-wrap justify-content-center c-animation">
                     <div class="c-form_button">
                       <button class="c-btnSubmit">Đăng ký ngay</button>
                     </div>
