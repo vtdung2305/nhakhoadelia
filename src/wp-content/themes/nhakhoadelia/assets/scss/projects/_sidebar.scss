@@ -1,4 +1,6 @@
 .p-sidebar {
+  font-family: $font-family-inter;
+  
   @include bp(pc) {
     padding: 0 20px;
   }

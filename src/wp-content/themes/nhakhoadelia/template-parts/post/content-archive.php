@@ -23,7 +23,7 @@ $cats = wp_get_object_terms($post->ID, 'life_style');
 if (has_post_thumbnail()) {
     $img = get_the_post_thumbnail_url($post->ID, 'full');
 } else {
-    $img = get_template_directory_uri(). "/assets/images/no-image.jpg";
+    $img = get_template_directory_uri(). "/assets/images/common/no-image.jpeg";
 }
 ?>
 
@@ -31,12 +31,12 @@ if (has_post_thumbnail()) {
         <div class="row">
             <figure class="figure col-sm-6 col-md-5 c-postThumbnail">
                 <a href="<?php echo get_permalink()?>">
-                    <img src="<?php echo $img ?>" class="figure-img img-fluid rounded" alt="<?php echo the_title();?>">
+                    <img src="<?php echo $img ?>" class="figure-img img-fluid rounded" alt="<?php the_title();?>">
                 </a>
             </figure>
             <div class="p-postList_info col-sm-6 col-md-7 d-flex flex-wrap">
                 <h3 class="p-postList_title">
-                    <a href="<?php echo get_permalink()?>"><?php echo the_title();?></a>
+                    <a href="<?php echo get_permalink()?>"><?php the_title();?></a>
                 </h3>
                 <div class="p-postList_meta">
                     <span><?php echo get_the_date();?></span>

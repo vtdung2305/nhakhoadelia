@@ -7,12 +7,20 @@
 .l-header {
 	position: relative;
 	background-color: $color-green;
-
+	transition: all 0.7s ease;
+	padding: 15px 0;
 	&_inner {
-		padding: 15px 0;
 		.logo {
 			max-width: 170px;
 		}
+	}
+
+	&.is-fixed {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999999;
+		animation: smoothScroll 1s forwards;
 	}
 
 	@include bp(tab) {
@@ -20,13 +28,21 @@
 		width: 100%;
 		z-index: 6;
 		top: 0;
+		padding: 8px 0;
 
 		&_inner {
-			padding: 8px 0;
-
 			.logo {
 				max-width: 120px;
 			}
 		}
+	}
+}
+
+@keyframes smoothScroll {
+	0% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(0px);
 	}
 }

@@ -7,7 +7,7 @@
  */
 ?>
 
-<header class="l-header">
+<header class="l-header sticky">
 	<div class="container">
 		<div class="l-header_inner d-flex justify-content-between align-items-center">
 			<div class="logo">

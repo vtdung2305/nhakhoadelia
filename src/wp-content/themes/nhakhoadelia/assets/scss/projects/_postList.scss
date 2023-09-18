@@ -1,5 +1,6 @@
 .p-postList {
   padding-top: 20px;
+  font-family: $font-family-inter;
   
   &_title {
     @include line-clamp(2);
@@ -10,7 +11,7 @@
 
     a {
       color: $color_green;
-      font-weight: 300;
+      font-weight: 500;
     }
   }
 
@@ -27,6 +28,12 @@
 
     margin-bottom: 10px;
     text-align: justify;
+    font-weight: 500;
+
+    p {
+      font-weight: 500;
+      @include fs(14, 20);
+    }
   }
 
   &_item {

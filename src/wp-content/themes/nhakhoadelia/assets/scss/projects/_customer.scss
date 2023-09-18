@@ -10,7 +10,6 @@
     left: 0;
     width: 417px;
     height: 362px;
-    background: url(../images/common/border.png) no-repeat center;
   }
 
   &_inner {
@@ -68,6 +67,10 @@
         font-weight: 700;
         padding-bottom: 10px;
       }
+    }
+
+    &_thumb {
+      overflow: hidden;
     }
   }
 

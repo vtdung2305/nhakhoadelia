@@ -21,8 +21,13 @@ input, button {
 }
 
 .site-main {
+    &.is-fixed {
+        @include bp(pc) {
+            padding-top: 90px;
+        }
+    }
     @include bp(tab) {
-        margin-top: 58px;
+        padding-top: 58px;
     }
 }
 

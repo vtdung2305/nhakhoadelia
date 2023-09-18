@@ -12,7 +12,7 @@ get_header();
     <!--section visual-->
     <section class="p-visual">
       <div class="p-visual_inner c-animation">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-pc.png" class="only-pc" alt="kiến tạo nụ cười">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-pc.png" class="only-pc w-100" alt="kiến tạo nụ cười">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-sp.png" class="only-sp" alt="kiến tạo nụ cười">
       </div>
     </section>
@@ -126,7 +126,7 @@ get_header();
             <div class="p-customer_item transparent"></div>
             <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-01.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-01.png" class="c-zoom" alt="">
               </div>
               <div class="p-customer_item_info">
                 <h3>
@@ -146,7 +146,7 @@ get_header();
 
             <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-02.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-02.png" class="c-zoom" alt="">
               </div>
               <div class="p-customer_item_info">
                 <h3>
@@ -166,7 +166,7 @@ get_header();
 
             <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-03.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-03.png" class="c-zoom" alt="">
               </div>
               <div class="p-customer_item_info">
                 <h3>
@@ -186,7 +186,7 @@ get_header();
 
             <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-04.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-04.png" class="c-zoom" alt="">
               </div>
               <div class="p-customer_item_info">
                 <h3>
@@ -206,7 +206,7 @@ get_header();
 
             <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-05.png" alt="chị bảo ngọc">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-05.png" class="c-zoom" alt="chị bảo ngọc">
               </div>
               <div class="p-customer_item_info">
                 <h3>
@@ -226,7 +226,7 @@ get_header();
 
             <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-06.png" alt= "chị trịnh hằng">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-06.png" class="c-zoom" alt= "chị trịnh hằng">
               </div>
               <div class="p-customer_item_info">
                 <h3>
@@ -246,7 +246,7 @@ get_header();
 
             <div class="p-customer_item c-animation fade-right">
               <div class="p-customer_item_thumb">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-07.png" alt="chị nguyễn t.linh">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-07.png" class="c-zoom" alt="chị nguyễn t.linh">
               </div>
               <div class="p-customer_item_info">
                 <h3>
@@ -311,9 +311,9 @@ get_header();
     <!--section house-->
     <section class="p-house">
       <div class="container-lg green">
-        <h2 class="c-titleBig white only-pc c-animation">NGÔI NHÀ CỦA<br>NHỮNG NỤ CƯỜI</h2>
         <h2 class="c-title white only-sp c-animation">nha khoa delia<br><span>ngôi nhà của những nụ cười</span></h2>
         <div class="p-house_inner">
+          <h2 class="c-titleBig white only-pc c-animation">NGÔI NHÀ CỦA<br>NHỮNG NỤ CƯỜI</h2>
           <div class="p-house_group only-pc">
             <div class="p-house_block d-flex align-items-center c-animation fade-left">
               <div class="p-house_block_thumb">
@@ -344,7 +344,7 @@ get_header();
 
             <div class="p-house_statistic c-animation fade-bottom">
               <p>Kiến tạo <span>+50.000</span> nụ cười</p>
-              <p><span>Điểm tựa chăm sóc</span><br>răng miệng của sao Việt</p>
+              <p><span>Điểm tựa chăm sóc</span><br>nụ cười sao Việt</p>
               <p><span>Hệ thống Dental Spa 5 sao</span><br>hàng đầu Việt Nam</p>
             </div>
           </div>
@@ -392,30 +392,60 @@ get_header();
         <h2 class="c-title only-pc c-animation">Kiến thức nha khoa - tin tức</h2>
         <h2 class="c-title white only-sp c-animation">Kiến thức nha khoa - tin tức</h2>
         <div class="p-news_list d-flex flex-wrap justify-content-between">
-          <div class="p-news_item d-grid d-md-flex c-animation">
-            <div class="p-news_item_info">
-              <h3 class="p-news_item_ttl">Các dáng răng sứ đẹp</h3>
-              <p class="p-news_item_excerpt">Nhu cầu bọc răng sứ thẩm mỹ đang ngày tăng cao. Đây là phương pháp làm đẹp cho hàm răng được nhiều người ưa thích. Nó giúp khắc phục được các khuyết điểm: răng xỉn màu, thưa, sứt mẻ, hô và lệch lạc nhẹ… Bạn có biết các dáng răng sứ đẹp và phù hợp khuôn mặt không? Tìm hiểu qua bài viết sau đây của Nha Khoa Delia nhé!</p>
-              <div class="text-end only-pc">
-                <a href="#" class="c-btnReadmoreNews">Xem thêm</a>
-              </div>
-            </div>
-            <div class="p-news_item_thumb flex-md-shrink-0">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news-01.png" alt="">
-            </div>
-          </div>
-          <div class="p-news_item d-grid d-md-flex flex-wrap-reverse c-animation">
-            <div class="p-news_item_info">
-              <h3 class="p-news_item_ttl"><a href="#">các bệnh lý khác</a></h3>
-              <p class="p-news_item_excerpt">Tiêu xương chân răng là gì? Niềng răng có bị tiêu xương không?</p>
-            </div>
-            <div class="p-news_item_thumb">
-              <a href="#">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news-02.png" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="p-news_item d-grid d-md-flex flex-wrap-reverse c-animation">
+          <?php 
+            // the query
+            $query = new WP_Query( array(
+                'posts_per_page' => 4, /* how many post you need to display */
+                'offset' => 0,
+                'orderby' => 'post_date',
+                'order' => 'DESC',
+                'post_type' => 'post', /* your post type name */
+                'post_status' => 'publish'
+            ));
+            $i = 0;
+          ?>
+          <?php if ( $query->have_posts() ) : ?>
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+              <?php if (has_post_thumbnail()) {
+                $img = get_the_post_thumbnail_url($post->ID, 'medium');
+              } else {
+                $img = get_template_directory_uri(). "/assets/images/common/no-image.jpeg";
+              } ?>
+              <?php if ($i === 0): ?>
+                <div class="p-news_item d-grid d-md-flex c-animation">
+                  <div class="p-news_item_info">
+                    <h3 class="p-news_item_ttl">
+                      <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+                    </h3>
+                    <p class="p-news_item_excerpt"><?php the_excerpt(); ?></p>
+                    <div class="text-end only-pc">
+                      <a href="<?php echo get_permalink(); ?>" class="c-btnReadmoreNews">Xem thêm</a>
+                    </div>
+                  </div>
+                  <div class="p-news_item_thumb flex-md-shrink-0">
+                    <a href="<?php echo get_permalink(); ?>">
+                      <img src="<?php echo $img; ?>" alt="<?php the_title(); ?>">
+                    </a>
+                  </div>
+                </div>
+              <?php else: ?>
+                <div class="p-news_item d-grid d-md-flex flex-wrap-reverse c-animation">
+                  <div class="p-news_item_info">
+                    <h3 class="p-news_item_ttl"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <p class="p-news_item_excerpt"><?php the_excerpt(); ?></p>
+                  </div>
+                  <div class="p-news_item_thumb">
+                    <a href="<?php echo get_permalink(); ?>">
+                      <img src="<?php echo $img; ?>" alt="<?php the_title(); ?>">
+                    </a>
+                  </div>
+                </div>
+              <?php endif; ?>
+            <?php $i++; endwhile; ?>
+          <?php endif; ?>
+          
+          
+          <!-- <div class="p-news_item d-grid d-md-flex flex-wrap-reverse c-animation">
             <div class="p-news_item_info">
               <h3 class="p-news_item_ttl">
                 <a href="#">bọc răng sứ</a>
@@ -440,7 +470,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/news-04.png" alt="">
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -504,5 +534,4 @@ get_header();
     <!-- end section contact-->
   </div>
 </main>
-<?php
-get_footer(); ?>
+<?php get_footer(); ?>

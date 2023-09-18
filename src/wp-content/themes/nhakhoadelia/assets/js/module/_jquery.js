@@ -22,6 +22,26 @@
 			document.querySelector('.first-button').addEventListener('click', function () {
 			document.querySelector('.animated-icon1').classList.toggle('open');
 			});
+
+			$(window).scroll(function(){
+				var sticky = $('.sticky');
+				var main = $('.site-main');
+						scroll = $(window).scrollTop();
+
+				if (scroll >= 90) {
+					sticky.addClass('is-fixed');
+					main.addClass('is-fixed')
+				}
+				else {
+					sticky.removeClass('is-fixed');
+					main.removeClass('is-fixed')
+				} 
+			});
+
+			$('#btn-chatbox').click(function() {
+				$(this).find('i').toggleClass('fa-times');
+				$('.c-chatbox_list').toggleClass('open');
+			})
 		},
 		/**
 		 *	UA判定

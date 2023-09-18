@@ -5,14 +5,22 @@
  * @package WordPress
  * @subpackage delia
  */
+
+if (has_post_thumbnail()) {
+  $img = get_the_post_thumbnail_url($post->ID, 'full');
+} else {
+  $img = get_template_directory_uri(). "/assets/images/common/no-image.jpeg";
+}
 ?>
-<li class="row align-items-center">
+
+<li class="row align-items-center py-2" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="col-4">
-    <a href="#">
-      <img src="<?php echo get_template_directory_uri();?>/assets/images/post-thumb.webp" width="600" height="300" class="img-fluid" alt="">
+    <a href="<?php echo get_permalink(); ?>">
+      <img src="<?php echo $img; ?>" width="600" height="300" class="img-fluid" alt="">
     </a>
   </div>
   <div class="col-8">
-    <a href="#" rel="bookmark">Răng sứ Nacera có tốt không, giá bao nhiêu? Cập nhật bảng giá 2023</a>
+    <a href="<?php echo get_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
   </div>
 </li>
+
