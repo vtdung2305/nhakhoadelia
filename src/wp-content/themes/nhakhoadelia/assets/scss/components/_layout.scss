@@ -26,9 +26,6 @@ input, button {
             padding-top: 90px;
         }
     }
-    @include bp(tab) {
-        padding-top: 58px;
-    }
 }
 
 .container-lg {

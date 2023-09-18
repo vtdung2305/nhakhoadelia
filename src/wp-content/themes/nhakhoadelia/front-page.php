@@ -11,9 +11,15 @@ get_header();
   <div class="l-content">
     <!--section visual-->
     <section class="p-visual">
-      <div class="p-visual_inner c-animation">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-pc.png" class="only-pc w-100" alt="kiến tạo nụ cười">
+      <div class="p-visual_inner">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-pc.png" class="only-pc w-100 c-animation" alt="kiến tạo nụ cười">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-sp.png" class="only-sp" alt="kiến tạo nụ cười">
+        <div class="p-visual_action">
+          <div class="p-visual_btn">
+            <a href="<?php echo get_site_url() ?>/dat-lich/" class="btn-booking">Đặt lịch</a>
+            <a href="tel:+84%20763296666" class="btn-contact">Liên hệ</a>
+          </div>
+        </div>
       </div>
     </section>
     <!--end section visual-->

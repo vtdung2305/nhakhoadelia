@@ -124,12 +124,17 @@
       background-color: $bg_gray02;
       padding: 17px;
       @include fs(11, 20);
+      font-family: $font-family-inter;
 
       color: $color_green;
       font-weight: 500;
 
       span {
         font-weight: 700;
+      }
+
+      p {
+        font-weight: 500;
       }
     }
 

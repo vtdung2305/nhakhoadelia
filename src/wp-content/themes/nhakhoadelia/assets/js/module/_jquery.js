@@ -72,10 +72,11 @@
 		 */
 		sliderCustomer: function() {
 			var mySwiper = new Swiper('.swiper-container', {
-				loop: true,
+				loop: false,
 				// speed: 1000,
 				autoplay: {
 					delay: 3000,
+					pauseOnMouseEnter: true,
 				},
 				grabCursor: true,
 				// centeredSlides: true,

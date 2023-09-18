@@ -20,7 +20,9 @@
 		top: 0;
 		width: 100%;
 		z-index: 999999;
-		animation: smoothScroll 1s forwards;
+		@include bp(pc) {
+			animation: smoothScroll 1s forwards;
+		}
 	}
 
 	@include bp(tab) {
