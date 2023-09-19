@@ -15,9 +15,11 @@ get_header();
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-pc.png" class="only-pc w-100" alt="kiến tạo nụ cười">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-sp.png" class="only-sp" alt="kiến tạo nụ cười">
         <div class="p-visual_action only-sp">
-          <div class="p-visual_btn">
+          <div class="p-visual_btn d-flex align-items-center justify-content-center">
             <a href="<?php echo get_site_url() ?>/dat-lich/" class="btn-booking">Đặt lịch</a>
-            <a href="tel:+84%20763296666" class="btn-contact">Liên hệ</a>
+            <a href="tel:+84%20763296666" class="btn-contact">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/contact.png" alt="liên hệ">
+            </a>
           </div>
         </div>
       </div>
@@ -430,7 +432,7 @@ get_header();
                   </div>
                   <div class="p-news_item_thumb flex-md-shrink-0">
                     <a href="<?php echo get_permalink(); ?>">
-                      <img src="<?php echo $img; ?>" alt="<?php the_title(); ?>">
+                      <img src="<?php echo $img; ?>" class="c-imgRatio" alt="<?php the_title(); ?>">
                     </a>
                   </div>
                 </div>
@@ -442,7 +444,7 @@ get_header();
                   </div>
                   <div class="p-news_item_thumb">
                     <a href="<?php echo get_permalink(); ?>">
-                      <img src="<?php echo $img; ?>" alt="<?php the_title(); ?>">
+                      <img src="<?php echo $img; ?>" class="c-imgRatio" alt="<?php the_title(); ?>">
                     </a>
                   </div>
                 </div>
