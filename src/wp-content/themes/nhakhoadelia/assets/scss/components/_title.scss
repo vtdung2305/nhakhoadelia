@@ -50,6 +50,10 @@
     color: $color_green;
   }
 
+  &.white {
+    color: $color_white;
+  }
+
   @include bp(tab) {
     @include fs(15, 22);
   }

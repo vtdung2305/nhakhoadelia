@@ -25,6 +25,7 @@
     color: $color_white;
     font-size: 70px;
     font-weight: 600;
+    text-align: center;
   }
 
   @include bp(tab) {
@@ -32,7 +33,7 @@
     background-size: cover;
 
     h2 {
-      font-size: 40px;
+      font-size: 35px;
     }
   }
 }

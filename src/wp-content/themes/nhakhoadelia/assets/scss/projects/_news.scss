@@ -36,7 +36,7 @@
       grid-template-columns: 52% 48%;
       column-gap: 15px;
       margin-bottom: 15px;
-      align-items: center;
+      align-items: flex-start;
 
       &_info {
         order: 2;
@@ -55,6 +55,7 @@
         font-weight: 700;
 
         @include bp(tab) {
+          @include fs(14, 24);
           color: $color_white;
         }
       }

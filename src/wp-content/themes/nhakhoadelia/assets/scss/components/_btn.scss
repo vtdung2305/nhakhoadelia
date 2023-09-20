@@ -5,6 +5,13 @@
   text-transform: uppercase;
   margin-bottom: auto;
   font-weight: 300;
+
+  @include bp(tab) {
+    @include fs(13, 24);
+    background-color: $color_yellow;
+    color: $color_white;
+    padding: 4px 20px;
+  }
 }
 
 .c-btnReadmoreNews {
@@ -20,6 +27,13 @@
   font-weight: 700;
 
   font-family: $font-family-barlow;
+
+  @include bp(tab) {
+    @include fs(13, 24);
+    background-color: $color_yellow;
+    color: $color_white;
+    padding: 4px 20px;
+  }
 }
 
 .c-btnSubmit {
@@ -30,7 +44,7 @@
   padding: 6px 20px;
   text-transform: uppercase;
   border-radius: 20px;
-  @include transition()
+  @include transition();
 
   &:hover {
     opacity: .7;

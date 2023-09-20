@@ -123,7 +123,7 @@
     &_txt {
       background-color: $bg_gray02;
       padding: 17px;
-      @include fs(11, 20);
+      @include fs(12, 20);
       font-family: $font-family-inter;
 
       color: $color_green;
@@ -142,6 +142,12 @@
       img {
         width: 100%;
       }
+    }
+  }
+
+  &_news {
+    @include bp(tab) {
+      margin-top: 15px;
     }
   }
 }

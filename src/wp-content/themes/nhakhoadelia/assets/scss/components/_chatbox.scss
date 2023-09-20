@@ -53,6 +53,11 @@
       visibility: visible;
     }
   }
+
+  @include bp(tab) {
+    bottom: 20px;
+    right: 15px;
+  }
 }
 
 @keyframes cbb-button-underlay {

@@ -72,11 +72,13 @@
 		 */
 		sliderCustomer: function() {
 			var mySwiper = new Swiper('.swiper-container', {
-				loop: false,
+				loop: true,
 				// speed: 1000,
 				autoplay: {
-					delay: 3000,
+					delay: 10000,
 					pauseOnMouseEnter: true,
+					disableOnInteraction: false,
+					stopOnLast: true,
 				},
 				grabCursor: true,
 				// centeredSlides: true,
@@ -92,6 +94,12 @@
 					prevEl: '.swiper-button-prev',
 				},
 			})
+
+			mySwiper.on('slideChange', function(){
+				if(mySwiper.isEnd){
+					mySwiper.autoplay = false;
+				}
+			});
 		},
 
 		/**
@@ -102,7 +110,7 @@
 				for (var i = 0; i < animations.length; i++) {
 					var windowHeight = window.innerHeight;
 					var elementTop = animations[i].getBoundingClientRect().top;
-					var elementVisible = 150;
+					var elementVisible = 50;
 					if (elementTop < windowHeight - elementVisible) {
 						animations[i].classList.add("active");
 					}

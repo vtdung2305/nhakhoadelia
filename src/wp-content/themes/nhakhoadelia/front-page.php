@@ -359,9 +359,9 @@ get_header();
         </div>
       </div>
 
-      <div class="container-lg white only-sp">
-        <h2 class="c-title only-sp c-animation">NGÔI NHÀ CỦA NHỮNG NỤ CƯỜI</h2>
-        <p class="c-desc green text-justify c-animation">Tiên phong với sứ mệnh kiến tạo hàng triệu NỤ CƯỜI HẠNH PHÚC TRỌN VẸN cho người Việt, Delia - nơi bạn được chăm sóc như “NGƯỜI 1 NHÀ.</p>
+      <div class="container-lg green only-sp">
+        <h2 class="c-title white only-sp c-animation">NGÔI NHÀ CỦA NHỮNG NỤ CƯỜI</h2>
+        <p class="c-desc white text-justify c-animation">Tiên phong với sứ mệnh kiến tạo hàng triệu NỤ CƯỜI HẠNH PHÚC TRỌN VẸN cho người Việt, Delia - nơi bạn được chăm sóc như “NGƯỜI 1 NHÀ.</p>
         <div class="p-house_news">
           <div class="p-house_item c-animation fade-right">
             <div class="p-house_item_txt d-flex align-items-center h-full">
@@ -425,8 +425,11 @@ get_header();
                     <h3 class="p-news_item_ttl">
                       <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
                     </h3>
-                    <p class="p-news_item_excerpt"><?php the_excerpt(); ?></p>
-                    <div class="text-end only-pc">
+                    <p class="p-news_item_excerpt only-pc"><?php the_excerpt(); ?></p>
+                    <div class="text-end mt-3 only-pc">
+                      <a href="<?php echo get_permalink(); ?>" class="c-btnReadmoreNews">Xem thêm</a>
+                    </div>
+                    <div class="text-start mt-3 only-sp">
                       <a href="<?php echo get_permalink(); ?>" class="c-btnReadmoreNews">Xem thêm</a>
                     </div>
                   </div>
@@ -440,7 +443,10 @@ get_header();
                 <div class="p-news_item d-grid d-md-flex flex-wrap-reverse c-animation">
                   <div class="p-news_item_info">
                     <h3 class="p-news_item_ttl"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <p class="p-news_item_excerpt"><?php the_excerpt(); ?></p>
+                    <p class="p-news_item_excerpt only-pc"><?php the_excerpt(); ?></p>
+                    <div class="text-start mt-3 only-sp">
+                      <a href="<?php echo get_permalink(); ?>" class="c-btnReadmoreNews">Xem thêm</a>
+                    </div>
                   </div>
                   <div class="p-news_item_thumb">
                     <a href="<?php echo get_permalink(); ?>">
@@ -509,10 +515,9 @@ get_header();
                   <div class="c-form_group c-animation">
                     <select name="" class="c-selectField">
                       <option value="">Chọn cơ sở</option>
-                      <option value="1">Cơ sở 1</option>
-                      <option value="2">Cơ sở 2</option>
-                      <option value="3">Cơ sở 3</option>
-                      <option value="4">Cơ sở 4</option>
+                      <option value="1">Cơ sở chi nhánh Hà Nội </option>
+                      <option value="2">Cơ sở chi nhánh Hồ Chí Minh </option>
+                      <option value="3">Cơ sở chi nhánh Thanh Hóa </option>
                     </select>
                   </div>
 
