@@ -6,6 +6,7 @@
 
 			$(function(){
 				self.common();
+				self.sliderTop();
 				self.sliderCustomer();
 				self.animation();
 			});
@@ -70,8 +71,43 @@
 		/*
 		 * Slider customer
 		 */
+		sliderTop: function() {
+			var mySwiper = new Swiper('#sliderTop', {
+				loop: true,
+				// speed: 1000,
+				autoplay: {
+					delay: 10000,
+					pauseOnMouseEnter: true,
+					disableOnInteraction: false,
+					stopOnLast: true,
+				},
+				grabCursor: true,
+				// centeredSlides: true,
+				slidesPerView: 'auto',
+				spaceBetween: 0,
+				// pagination: {
+				// 	el: ".swiper-pagination",
+				// 	clickable: true,
+				// },
+				// Navigation arrows
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			})
+
+			// mySwiper.on('slideChange', function(){
+			// 	if(mySwiper.isEnd){
+			// 		mySwiper.autoplay = false;
+			// 	}
+			// });
+		},
+
+		/*
+		 * Slider customer
+		 */
 		sliderCustomer: function() {
-			var mySwiper = new Swiper('.swiper-container', {
+			var mySwiper = new Swiper('#sliderCustomer', {
 				loop: true,
 				// speed: 1000,
 				autoplay: {

@@ -12,8 +12,40 @@ get_header();
     <!--section visual-->
     <section class="p-visual">
       <div class="p-visual_inner">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-pc.png" class="only-pc w-100" alt="kiến tạo nụ cười">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-sp.png" class="only-sp" alt="kiến tạo nụ cười">
+        <div class="only-pc">
+          <div class="sliderTop">
+            <div class="swiper-container" id="sliderTop">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <?php
+                  $query_slider = new WP_Query( array(
+                    'posts_per_page' => 4, /* how many post you need to display */
+                    'offset' => 0,
+                    'orderby' => 'post_date',
+                    'order' => 'DESC',
+                    'post_type' => 'slider', /* your post type name */
+                    'post_status' => 'publish'
+                  ));
+
+                  if ( $query_slider->have_posts() ) :
+                    while ( $query_slider->have_posts() ) : $query_slider->the_post(); ?>
+                      <div class="swiper-slide">
+                        <?php the_post_thumbnail( 'full', array( 'loading' => true, 'class' => 'w-100', 'alt' => get_the_title() ) ); ?>
+                      </div>
+                    <?php endwhile;
+                  endif;
+                ?>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+        <div class="only-sp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mainVisual-sp.png" class="w-100" alt="kiến tạo nụ cười">
+        </div>
         <div class="p-visual_action only-sp">
           <div class="p-visual_btn d-flex align-items-center justify-content-center">
             <a href="<?php echo get_site_url() ?>/dat-lich/" class="btn-booking">Đặt lịch</a>
@@ -71,7 +103,7 @@ get_header();
           <p class="c-desc only-pc c-animation fade-bottom">Với sứ mệnh kiến tạo hàng triệu nụ cười rạng rỡ cho người Việt, hệ thống Nha Khoa Delia  luôn cố gắng và nỗ lực hết mình trong công cuộc thu hút nhân tài nha khoa đầu ngành, có tay nghề giỏi, kinh nghiệm chuyên sâu trong lĩnh vực răng hàm mặt ở cả trong và ngoài nước.</p>
           <div class="p-team_slider only-sp">
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div class="swiper-container" id="sliderCustomer">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->

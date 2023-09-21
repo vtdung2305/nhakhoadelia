@@ -10,6 +10,14 @@
     padding-right: 15px;
     padding-left: 15px;
   }
+
+  > li {
+    &:not(.menu-item-has-children):last-child {
+      a {
+        color: $color_yellow;
+      }
+    }
+  }
 }
 
 .navbar {

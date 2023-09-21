@@ -52,7 +52,8 @@ function delia_register_custom_post_type_doctor() {
       'capability_type'    => 'post',
       'has_archive'        => true,
       'hierarchical'       => false,
-      'menu_position'      => 20,
+      'menu_position'      => 4,
+      'menu_icon'          => 'dashicons-admin-customizer',
       'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
       'taxonomies'         => array( 'doctor-categories'),
       'show_in_rest'       => true,
@@ -102,7 +103,8 @@ function delia_register_custom_post_type_service() {
       'capability_type'    => 'post',
       'has_archive'        => true,
       'hierarchical'       => false,
-      'menu_position'      => 20,
+      'menu_position'      => 5,
+      'menu_icon'          => 'dashicons-format-aside',
       'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
       // 'taxonomies'         => array( 'service-categories'),
       'show_in_rest'       => true,
@@ -112,3 +114,54 @@ function delia_register_custom_post_type_service() {
   register_post_type( 'service', $args );
 }
 add_action( 'init', 'delia_register_custom_post_type_service' );
+
+function delia_register_custom_post_type_slider() {
+  $labels = array(
+      'name'                  => _x( 'Slider', 'Post type general name', 'slider' ),
+      'singular_name'         => _x( 'Slider', 'Post type singular name', 'slider' ),
+      'menu_name'             => _x( 'Slider', 'Admin Menu text', 'slider' ),
+      'name_admin_bar'        => _x( 'Slider', 'Add New on Toolbar', 'slider' ),
+      'add_new'               => __( 'Tạo Slider', 'slider' ),
+      'add_new_item'          => __( 'Add New Slider', 'slider' ),
+      'new_item'              => __( 'New Slider', 'slider' ),
+      'edit_item'             => __( 'Chỉnh sữa Slider', 'slider' ),
+      'view_item'             => __( 'Xem Slider', 'slider' ),
+      'all_items'             => __( 'Tất cả Slider', 'slider' ),
+      'search_items'          => __( 'Search Slider', 'slider' ),
+      'parent_item_colon'     => __( 'Parent Slider:', 'slider' ),
+      'not_found'             => __( 'No Slider found.', 'slider' ),
+      'not_found_in_trash'    => __( 'No Slider found in Trash.', 'slider' ),
+      'featured_image'        => _x( 'Slider Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'slider' ),
+      'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'slider' ),
+      'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'slider' ),
+      'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'slider' ),
+      'archives'              => _x( 'Slider archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'slider' ),
+      'insert_into_item'      => _x( 'Insert into Slider', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'slider' ),
+      'uploaded_to_this_item' => _x( 'Uploaded to this slider', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'slider' ),
+      'filter_items_list'     => _x( 'Filter Slider list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'slider' ),
+      'items_list_navigation' => _x( 'Slider list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'slider' ),
+      'items_list'            => _x( 'Slider list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'slider' ),
+  );     
+  $args = array(
+      'labels'             => $labels,
+      'description'        => 'Slider custom post type.',
+      'public'             => true,
+      'publicly_queryable' => true,
+      'show_ui'            => true,
+      'show_in_menu'       => true,
+      'query_var'          => true,
+      'rewrite'            => array( 'slug' => 'slider' ),
+      'capability_type'    => 'post',
+      'has_archive'        => true,
+      'hierarchical'       => false,
+      'menu_position'      => 6,
+      'menu_icon'          => 'dashicons-format-gallery',
+      'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
+      // 'taxonomies'         => array( 'service-categories'),
+      'show_in_rest'       => true,
+      'show_in_nav_menus'  => true
+  );
+   
+  register_post_type( 'slider', $args );
+}
+add_action( 'init', 'delia_register_custom_post_type_slider' );
