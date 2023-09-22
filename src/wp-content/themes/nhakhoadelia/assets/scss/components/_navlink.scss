@@ -12,7 +12,8 @@
   }
 
   > li {
-    &:not(.menu-item-has-children):last-child {
+    &:not(.menu-item-has-children):last-child,
+    &.current-menu-item {
       a {
         color: $color_yellow;
       }
@@ -103,6 +104,12 @@
       .nav-link {
         color: $color-bg-base;
         font-size: 14px;
+      }
+
+      .current-menu-item {
+        > a {
+          color: $color_yellow;
+        }
       }
     }
   }

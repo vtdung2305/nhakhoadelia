@@ -545,7 +545,7 @@ get_header();
                 </div>
                 <div class="col-md-6">
                   <div class="c-form_group c-animation">
-                    <select name="" class="c-selectField">
+                    <select name="branch_name" class="c-selectField">
                       <option value="">Chọn cơ sở</option>
                       <option value="1">Cơ sở chi nhánh Hà Nội </option>
                       <option value="2">Cơ sở chi nhánh Hồ Chí Minh </option>
@@ -554,12 +554,12 @@ get_header();
                   </div>
 
                   <div class="c-form_group c-animation">
-                    <select name="" class="c-selectField">
-                      <option value="">Chọn cơ sở</option>
-                      <option value="1">Cơ sở 1</option>
-                      <option value="2">Cơ sở 2</option>
-                      <option value="3">Cơ sở 3</option>
-                      <option value="4">Cơ sở 4</option>
+                    <select name="service_name" class="c-selectField">
+                      <option value="">Chọn dịch vụ</option>
+                      <option value="1">Bọc răng sứ</option>
+                      <option value="2">Dán sứ veneer</option>
+                      <option value="3">Trồng răng implant</option>
+                      <option value="4">Niềng răng</option>
                     </select>
                   </div>
 

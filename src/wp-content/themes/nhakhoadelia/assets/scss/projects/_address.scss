@@ -1,0 +1,26 @@
+.p-address {
+  &_block {
+    font-family: $font-family-inter;
+    padding: 20px 0;
+    &:first-child {
+      border-bottom: 1px dotted $color_green;
+    }
+    
+
+    li {
+      padding: 5px 0;
+      span,
+      a {
+        color: $color_green;
+        @include fs(17, 24);
+      }
+
+      i {
+        @include fs(18, 26);
+        margin-right: 7px;
+        width: 30px;
+        text-align: center;
+      }
+    }
+  }
+}
