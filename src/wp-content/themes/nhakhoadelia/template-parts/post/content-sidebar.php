@@ -14,9 +14,9 @@ if (has_post_thumbnail()) {
 ?>
 
 <li class="row align-items-center py-2" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="col-4">
+  <div class="col-4 overflow-hidden">
     <a href="<?php echo get_permalink(); ?>">
-      <img src="<?php echo $img; ?>" width="600" height="300" class="img-fluid" alt="">
+      <img src="<?php echo $img; ?>" width="600" height="300" class="img-fluid c-zoom" alt="<?php echo get_the_title(); ?>">
     </a>
   </div>
   <div class="col-8">
