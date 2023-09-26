@@ -17,7 +17,7 @@ $cat_name = $category[0]->name;
 ?>
 	<div class="p-post">
 		<h2 class="p-post_title"><?php the_title(); ?></h2>
-		<div class="p-post_meta d-flex">
+		<div class="p-post_meta d-flex flex-wrap">
 			<span class="p-post_cat">
 				<a href="<?php echo get_category_link($cat_id); ?>"><i class="fa-solid fa-tag"></i><?php echo $cat_name;?></a>
 			</span>

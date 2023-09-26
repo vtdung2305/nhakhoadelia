@@ -13,7 +13,16 @@ get_header(); ?>
 <main class="site-main">
 	<div class="c-visual">
 		<div class="c-visual_inner h-100 d-flex align-items-center justify-content-center">
-			<h2><?php the_title(); ?></h2>
+			<h2>
+				<?php if ($post_name === 'single') : 
+					$category = get_the_category();
+					$cat_id = $category[0]->cat_ID;
+					$cat_name = $category[0]->name;
+					echo $cat_name; ?>
+				<?php else: ?>
+					<?php the_title(); ?>
+				<?php endif; ?>
+			</h2>
 		</div>
 	</div>
 
