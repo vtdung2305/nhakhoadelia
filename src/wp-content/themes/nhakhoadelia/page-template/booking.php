@@ -8,6 +8,17 @@
 get_header(); ?>
 
 <main class="site-main">
+  <div class="p-visual">
+		<div class="p-visual_action only-sp">
+			<div class="p-visual_btn d-flex align-items-center justify-content-center">
+				<a href="<?php echo get_site_url() ?>/dat-lich/" class="btn-booking">Đặt lịch</a>
+				<a href="tel:+84%20763296666" class="btn-contact">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/contact.png" alt="liên hệ">
+				</a>
+			</div>
+		</div>
+	</div>
+
 	<div class="l-content">
 		<div class="container-lg">
 			<div class="row">
@@ -24,30 +35,20 @@ get_header(); ?>
                   </div>
 
                   <div class="c-form_group c-animation">
-                    <input type="text" name="phone" class="c-inputField" placeholder="Số điện thoại">
-                  </div>
-
-                  <div class="c-form_group c-animation">
                     <textarea name="status" class="c-textField" cols="30" rows="10" placeholder="Tình trạng"></textarea>
                   </div>
                 </div>
                 <div class="col-md-6">
+                  <div class="c-form_group c-animation">
+                    <input type="text" name="phone" class="c-inputField" placeholder="SDT">
+                  </div>
+
                   <div class="c-form_group c-animation">
                     <select name="branch_name" class="c-selectField">
                       <option value="">Chọn cơ sở</option>
                       <option value="1">Cơ sở chi nhánh Hà Nội </option>
                       <option value="2">Cơ sở chi nhánh Hồ Chí Minh </option>
                       <option value="3">Cơ sở chi nhánh Thanh Hóa </option>
-                    </select>
-                  </div>
-
-                  <div class="c-form_group c-animation">
-                    <select name="service_name" class="c-selectField">
-                      <option value="">Chọn dịch vụ</option>
-                      <option value="1">Bọc răng sứ</option>
-                      <option value="2">Dán sứ veneer</option>
-                      <option value="3">Trồng răng implant</option>
-                      <option value="4">Niềng răng</option>
                     </select>
                   </div>
 

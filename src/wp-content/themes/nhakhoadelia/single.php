@@ -7,12 +7,24 @@
  */
 
 get_header(); ?>
-
+<?php
+	$post_name = get_post_type( get_the_ID() ) === 'post' ? 'single' : 'service';
+?>
 <main class="site-main">
 	<div class="c-visual">
 		<div class="c-visual_inner h-100 d-flex align-items-center justify-content-center">
-			<h2>Tin Tức</h2>
-			
+			<h2><?php the_title(); ?></h2>
+		</div>
+	</div>
+
+	<div class="p-visual">
+		<div class="p-visual_action only-sp">
+			<div class="p-visual_btn d-flex align-items-center justify-content-center">
+				<a href="<?php echo get_site_url() ?>/dat-lich/" class="btn-booking">Đặt lịch</a>
+				<a href="tel:+84%20763296666" class="btn-contact">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/contact.png" alt="liên hệ">
+				</a>
+			</div>
 		</div>
 	</div>
 

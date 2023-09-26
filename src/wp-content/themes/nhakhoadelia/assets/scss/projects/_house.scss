@@ -108,7 +108,9 @@
   }
 
   .c-desc {
-    padding-top: 16px;
+    @include bp(pc) {
+      padding-top: 16px;
+    }
   }
 
   &_item {

@@ -110,34 +110,56 @@ get_header();
                 <div class="swiper-slide">
                   <div class="p-team_slider_item">
                     <div class="p-team_slider_thumb">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/doctors/doctor-01.png" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/doctors/doctor-01.png" alt="bac sĩ nguyễn hữu bình">
                     </div>
-                    <div class="p-team_slider_info">
+                    <!-- <div class="p-team_slider_info">
                       <h3>Bác sĩ Ngô Xuân Hưng</h3>
                       <p>Giám đốc Chuyên môn Hệ thống Delia</p>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="p-team_slider_item">
                     <div class="p-team_slider_thumb">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/doctors/doctor-01.png" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/doctors/doctor-02.png" alt="bác sĩ văn viết thịnh">
                     </div>
-                    <div class="p-team_slider_info">
+                    <!-- <div class="p-team_slider_info">
                       <h3>Bác sĩ Ngô Xuân Hưng</h3>
                       <p>Giám đốc Chuyên môn Hệ thống Delia</p>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="p-team_slider_item">
                     <div class="p-team_slider_thumb">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/doctors/doctor-01.png" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/doctors/doctor-03.png" alt="bác sĩ nguyễn quốc thắng">
                     </div>
-                    <div class="p-team_slider_info">
+                    <!-- <div class="p-team_slider_info">
                       <h3>Bác sĩ Ngô Xuân Hưng</h3>
                       <p>Giám đốc Chuyên môn Hệ thống Delia</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-team_slider_item">
+                    <div class="p-team_slider_thumb">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/doctors/doctor-04.png" alt="bác sĩ nguyễn hùng">
                     </div>
+                    <!-- <div class="p-team_slider_info">
+                      <h3>Bác sĩ Ngô Xuân Hưng</h3>
+                      <p>Giám đốc Chuyên môn Hệ thống Delia</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-team_slider_item">
+                    <div class="p-team_slider_thumb">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/doctors/doctor-05.png" alt="bác sĩ vũ tiến dũng">
+                    </div>
+                    <!-- <div class="p-team_slider_info">
+                      <h3>Bác sĩ Ngô Xuân Hưng</h3>
+                      <p>Giám đốc Chuyên môn Hệ thống Delia</p>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -391,8 +413,8 @@ get_header();
         </div>
       </div>
 
-      <div class="container-lg green only-sp">
-        <h2 class="c-title white only-sp c-animation">NGÔI NHÀ CỦA NHỮNG NỤ CƯỜI</h2>
+      <div class="container-lg green only-sp pt-0">
+        <!-- <h2 class="c-title white only-sp c-animation">NGÔI NHÀ CỦA NHỮNG NỤ CƯỜI</h2> -->
         <p class="c-desc white text-justify c-animation">Tiên phong với sứ mệnh kiến tạo hàng triệu NỤ CƯỜI HẠNH PHÚC TRỌN VẸN cho người Việt, Delia - nơi bạn được chăm sóc như “NGƯỜI 1 NHÀ.</p>
         <div class="p-house_news">
           <div class="p-house_item c-animation fade-right">
@@ -535,9 +557,7 @@ get_header();
                     <input type="text" name="name" class="c-inputField" placeholder="Họ và tên">
                   </div>
 
-                  <div class="c-form_group c-animation">
-                    <input type="text" name="phone" class="c-inputField" placeholder="Số điện thoại">
-                  </div>
+                  
 
                   <div class="c-form_group c-animation">
                     <textarea name="status" class="c-textField" cols="30" rows="10" placeholder="Tình trạng"></textarea>
@@ -545,21 +565,15 @@ get_header();
                 </div>
                 <div class="col-md-6">
                   <div class="c-form_group c-animation">
+                    <input type="text" name="phone" class="c-inputField" placeholder="SDT">
+                  </div>
+
+                  <div class="c-form_group c-animation">
                     <select name="branch_name" class="c-selectField">
                       <option value="">Chọn cơ sở</option>
                       <option value="1">Cơ sở chi nhánh Hà Nội </option>
                       <option value="2">Cơ sở chi nhánh Hồ Chí Minh </option>
                       <option value="3">Cơ sở chi nhánh Thanh Hóa </option>
-                    </select>
-                  </div>
-
-                  <div class="c-form_group c-animation">
-                    <select name="service_name" class="c-selectField">
-                      <option value="">Chọn dịch vụ</option>
-                      <option value="1">Bọc răng sứ</option>
-                      <option value="2">Dán sứ veneer</option>
-                      <option value="3">Trồng răng implant</option>
-                      <option value="4">Niềng răng</option>
                     </select>
                   </div>
 
