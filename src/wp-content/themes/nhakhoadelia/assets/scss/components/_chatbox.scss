@@ -1,13 +1,13 @@
 .c-chatbox {
   position: fixed;
   bottom: 24px;
-  right: 28px;
+  right: 24px;
   z-index: 9999;
 
   &_inner {
     position: fixed;
     bottom: 84px;
-    right: 25px;
+    right: 24px;
     z-index: 9999;
     display: flex;
     flex-flow: column;
