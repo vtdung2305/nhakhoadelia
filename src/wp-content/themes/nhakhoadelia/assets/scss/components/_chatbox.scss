@@ -5,9 +5,18 @@
   z-index: 9999;
 
   &_inner {
+    position: fixed;
+    bottom: 84px;
+    right: 30px;
+    z-index: 9999;
     display: flex;
     flex-flow: column;
     column-gap: 15px;
+
+    @include bp(tab) {
+      bottom: 54px;
+      right: 40px;
+    }
   }
 
   &_btn {
@@ -46,17 +55,52 @@
     transition: transform .3s,opacity .3s,visibility .3s;
     opacity: 0;
     padding-bottom: 10px;
+    display: none;
 
     &.open {
-      
+      display: block;
       opacity: 1;
       visibility: visible;
     }
   }
 
   @include bp(tab) {
-    bottom: 20px;
-    right: 15px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 10;
+    background-color: $color_white;
+    
+
+    &_bottom {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 1px;
+      li {
+        width: calc(100% / 3);
+        a {
+          display: block;
+          background-color: $color_green;
+          color: $color_white;
+          text-align: center;
+          padding: 10px 0 5px;
+
+          i {
+            font-size: 20px;
+          }
+
+          span {
+            @include fs(15, 15);
+            padding-top: 3px;
+            font-weight: 500;
+            display: block;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
   }
 }
 

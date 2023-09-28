@@ -89,7 +89,7 @@
 				</div>
 				<ul class="c-social only-sp">
 					<li>
-						<a href="#">
+						<a href="https://www.facebook.com/NhaKhoaDelia/" target="_blank">
 							<span class="icon-facebook"></span>
 						</a>
 					</li>

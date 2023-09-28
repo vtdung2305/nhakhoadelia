@@ -39,7 +39,7 @@
 				} 
 			});
 
-			$('#btn-chatbox').click(function() {
+			$('.btn-chatbox').click(function() {
 				$(this).find('i').toggleClass('fa-times');
 				$('.c-chatbox_list').toggleClass('open');
 			})
