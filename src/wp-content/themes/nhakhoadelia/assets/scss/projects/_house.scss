@@ -1,7 +1,7 @@
 .p-house {
   @include bp(pc) {
     padding: 87px 0 72px;
-    background: url(../images/common/bg_house.png) no-repeat top center;
+    background: url(../images/common/bg_house.webp) no-repeat top center;
     background-size: cover;
   // height: 845px;
   }

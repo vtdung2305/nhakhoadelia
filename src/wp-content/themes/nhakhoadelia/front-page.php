@@ -327,34 +327,34 @@ get_header();
             </div>
           </div>
           <div class="p-customer_group only-sp">
-            <ul class="d-flex justify-content-between c-animation">
-              <li>
+            <ul class="d-flex justify-content-between c-animation" id="list-customer">
+              <li class="current" data-thumb="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-thumb-01.webp" data-name="chị Nghiêm Ngọc Huyền" data-status="Sâu kẽ, khấp khểnh, mòn cổ răng" data-solution="Bọc 20 răng sứ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-01.png" alt="chị nghiêm ngọc">
               </li>
-              <li>
+              <li data-thumb="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-thumb-02.webp" data-name="chị bảo ngọc" data-status="Răng ố vàng, hình thể không đều" data-solution="Dán 20 răng sứ Veneer">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-02.png" alt="chị nghiêm ngọc">
               </li>
-              <li>
+              <li data-thumb="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-thumb-03.webp" data-name="chị Trịnh Thị Hằng" data-status="Nhiễm tetrecycline, khấp khểnh" data-solution="Bọc 20 răng sứ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-03.png" alt="chị nghiêm ngọc">
               </li>
-              <li>
+              <li data-thumb="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-thumb-04.webp" data-name="chị Nguyễn Thị Linh" data-status="Khấp khểnh, hình thể ngắn" data-solution="Niềng răng mắc cài">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-04.png" alt="chị nghiêm ngọc">
               </li>
-              <li>
+              <li data-thumb="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-thumb-05.webp" data-name="NSND Lan Hương" data-status="Thiếu răng, xỉn màu" data-solution="Trồng 4 trụ Implant, thẩm mỹ răng sứ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-05.png" alt="chị nghiêm ngọc">
               </li>
-              <li>
+              <li data-thumb="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-thumb-06.webp" data-name="BTV Hoàng Trang" data-status="Răng thưa kẽ, xỉn màu" data-solution="Thẩm mỹ 20 răng sứ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-06.png" alt="chị nghiêm ngọc">
               </li>
-              <li>
+              <li data-thumb="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-thumb-07.webp" data-name="MC Phương Hiếu" data-status="Răng xỉn màu, hình thế không đều" data-solution="Thẩm mỹ 20 răng sứ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-sp-07.png" alt="chị nghiêm ngọc">
               </li>
             </ul>
             <div class="p-customer_visual c-animation">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-visual.png" alt="">
+              <img id="thumb-customer" src="<?php echo get_template_directory_uri(); ?>/assets/images/customers/customer-thumb-01.webp" alt="chị Nghiêm Ngọc Huyền">
             </div>
             <div class="p-customer_info c-animation">
-              <h3 class="p-customer_info_ttl">Chị Nghiêm Ngọc</h3>
+              <h3 class="p-customer_info_ttl" id="name-customer">Chị Nghiêm Ngọc Huyền</h3>
               <ul class="p-customer_info_meta">
                 <li>
                   <p>Tình trạng: <span id="status-customer">Sâu kẽ, khấp khểnh, mòn cổ răng</span></p>

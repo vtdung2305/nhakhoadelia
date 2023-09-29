@@ -8,6 +8,7 @@
 				self.common();
 				self.sliderTop();
 				self.sliderCustomer();
+				self.loadInfoCustomer();
 				self.animation();
 			});
 
@@ -136,6 +137,25 @@
 					mySwiper.autoplay = false;
 				}
 			});
+		},
+
+		/**
+		 * Event click customer
+		 */
+		loadInfoCustomer: function() {
+			$('#list-customer li').click(function(e) {
+				var thumb = $(this).data('thumb');
+				var name = $(this).data('name');
+				var status = $(this).data('status');
+				var solution = $(this).data('solution');
+				$('#list-customer').find('li').removeClass('current')
+				$(this).addClass('current')
+				$('#thumb-customer').attr('src', thumb);
+				$('#thumb-customer').attr('alt', name);
+				$('#name-customer').text(name);
+				$('#status-customer').text(status);
+				$('#solution-customer').text(solution);
+			})
 		},
 
 		/**

@@ -1,6 +1,6 @@
 .p-customer {
   @include bp(pc) {
-    background: #fff url(../images/common/bg_customer.png) no-repeat top center;
+    background: #fff url(../images/common/bg_customer.webp) no-repeat top center;
     background-size: cover;
   }
   
@@ -75,10 +75,14 @@
   }
 
   &_visual {
-   margin-top: 13px; 
+   margin-top: 13px;
+   height: 468px;
+   overflow: hidden;
 
    img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
    }
   }
 
@@ -104,6 +108,21 @@
 
       span {
         font-weight: 700;
+      }
+    }
+  }
+
+  &_group {
+    #list-customer {
+      img {
+        width: 48px;
+        height: 48px;
+      }
+      .current {
+        img {
+          border: 1px solid $color_green;
+          border-radius: 100%;
+        }
       }
     }
   }

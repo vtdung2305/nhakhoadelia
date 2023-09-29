@@ -165,3 +165,53 @@ function delia_register_custom_post_type_slider() {
   register_post_type( 'slider', $args );
 }
 add_action( 'init', 'delia_register_custom_post_type_slider' );
+
+function delia_register_custom_post_type_customer() {
+  $labels = array(
+      'name'                  => _x( 'Customer', 'Post type general name', 'customer' ),
+      'singular_name'         => _x( 'Customer', 'Post type singular name', 'customer' ),
+      'menu_name'             => _x( 'Customer', 'Admin Menu text', 'customer' ),
+      'name_admin_bar'        => _x( 'Slider', 'Add New on Toolbar', 'customer' ),
+      'add_new'               => __( 'Tạo Khách hàng', 'customer' ),
+      'add_new_item'          => __( 'Add New Customer', 'customer' ),
+      'new_item'              => __( 'New Customer', 'customer' ),
+      'edit_item'             => __( 'Chỉnh sữa Customer', 'customer' ),
+      'view_item'             => __( 'Xem Customer', 'customer' ),
+      'all_items'             => __( 'Tất cả Customer', 'customer' ),
+      'search_items'          => __( 'Search Customer', 'customer' ),
+      'parent_item_colon'     => __( 'Parent Customer:', 'customer' ),
+      'not_found'             => __( 'No Customer found.', 'customer' ),
+      'not_found_in_trash'    => __( 'No Customer found in Trash.', 'customer' ),
+      'featured_image'        => _x( 'Customer Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'customer' ),
+      'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'customer' ),
+      'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'customer' ),
+      'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'customer' ),
+      'archives'              => _x( 'Customer archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'customer' ),
+      'insert_into_item'      => _x( 'Insert into Customer', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'customer' ),
+      'uploaded_to_this_item' => _x( 'Uploaded to this Customer', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'customer' ),
+      'filter_items_list'     => _x( 'Filter Customer list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'customer' ),
+      'items_list_navigation' => _x( 'Customer list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'customer' ),
+      'items_list'            => _x( 'Customer list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'customer' ),
+  );     
+  $args = array(
+      'labels'             => $labels,
+      'description'        => 'Customer custom post type.',
+      'public'             => true,
+      'publicly_queryable' => true,
+      'show_ui'            => true,
+      'show_in_menu'       => true,
+      'query_var'          => true,
+      'rewrite'            => array( 'slug' => 'customer' ),
+      'capability_type'    => 'post',
+      'has_archive'        => true,
+      'hierarchical'       => false,
+      'menu_position'      => 6,
+      'menu_icon'          => 'dashicons-format-gallery',
+      'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
+      'show_in_rest'       => true,
+      'show_in_nav_menus'  => true
+  );
+   
+  register_post_type( 'customer', $args );
+}
+// add_action( 'init', 'delia_register_custom_post_type_customer' );
