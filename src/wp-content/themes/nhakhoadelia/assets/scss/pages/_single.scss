@@ -64,7 +64,10 @@
     p {
       color: $color-font-base;
       margin-bottom: 1em;
-      text-align: justify;
+
+      &:not(.wp-caption-text) {
+        text-align: justify;
+      }
     }
 
     h2 {
