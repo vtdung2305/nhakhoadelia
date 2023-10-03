@@ -25,7 +25,7 @@
 .p-post_content h3,
 .p-post_content h4,
 .p-post_content h5 {
-  font-family: Roboto;
+  // font-family: Roboto;
 }
 ​
 .p-post_content h1 {
@@ -90,7 +90,7 @@
 .p-post_content kbd,
 .p-post_content pre,
 .p-post_content samp {
-  font-family: monospace, serif;
+  // font-family: monospace, serif;
   font-size: 0.875rem;
 }
 ​
@@ -101,7 +101,7 @@
   overflow: auto;
   background: #f5f5f5;
   color: #666;
-  font-family: monospace;
+  // font-family: monospace;
   font-size: 0.875rem;
   white-space: pre;
   white-space: pre-wrap;
@@ -441,12 +441,12 @@
 }
 ​
 .p-post_content [class*="jeg_"] .fa {
-  font-family: FontAwesome;
+  // font-family: FontAwesome;
 }
 ​
 .p-post_content span.required {
   color: #f70d28;
-  font-family: monospace;
+  // font-family: monospace;
   font-size: 16px;
   font-weight: 400;
 }
@@ -562,7 +562,7 @@
 .p-post_content pre,
 .p-post_content samp {
   padding: 0.2em 0.5em;
-  font-family: "Lucida Console", Monaco, monospace;
+  // font-family: "Lucida Console", Monaco, monospace;
   font-size: 0.9em;
 }
 ​
