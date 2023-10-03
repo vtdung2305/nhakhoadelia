@@ -30,6 +30,7 @@
 ​
 .p-post_content h1 {
   font-size: 25px/16pxrem;
+  color: $color_green;
 }
 ​
 .p-post_content h2 {
@@ -364,22 +365,22 @@
 @media (min-width: 601px) {
   .p-post_content ol,
   .p-post_content ul {
-    padding-left: 2.14285714em;
+    // padding-left: 2.14285714em;
   }
 }
 
 @media (max-width: 600px) {
   .p-post_content ol,
   .p-post_content ul {
-    padding-left: 1rem;
+    list-style-type: disc;
+    // padding-left: 1rem;
   }
 }
 
 .p-post_content li {
   margin-bottom: 0.5em;
-  padding-left: 1.25rem;
-  color: #fff;
-  text-indent: -1.375rem;
+  // padding-left: 1.25rem;
+  list-style: disc
 }
 
 .p-post_content a {

@@ -60,14 +60,11 @@
     @include fs(18, 26);
 
     font-weight: 300;
+    text-align: justify;
 
     p {
       color: $color-font-base;
       margin-bottom: 1em;
-
-      &:not(.wp-caption-text) {
-        text-align: justify;
-      }
     }
 
     h2 {
