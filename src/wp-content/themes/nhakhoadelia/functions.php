@@ -537,3 +537,5 @@ add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 require_once ('inc/post-type.php');
 
 require_once ('inc/taxonomy.php');
+
+require_once ('inc/custom-pagination.php');

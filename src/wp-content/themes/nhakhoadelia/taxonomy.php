@@ -26,7 +26,7 @@ get_header(); ?>
 					get_template_part( 'template-parts/post/content', 'none' );
 				endif; ?>
 			</section>
-			<?php custom_pagination(); ?>
+			<?php bootstrap_pagination(); ?>
 		</main><!-- #main -->
 		<?php get_sidebar(); ?>
 	</div><!-- #primary -->	

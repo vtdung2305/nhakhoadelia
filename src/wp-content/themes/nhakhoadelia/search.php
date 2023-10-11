@@ -29,7 +29,7 @@ get_header();
                 echo "<div class='no-post'><p>Không tìm thấy kết quả, thử cụm từ tìm kiếm khác.</p></div>";
                 endif; ?>
             </section>
-            <?php custom_pagination(); ?>
+            <?php bootstrap_pagination(); ?>
         </main><!-- #main -->
     </div><!-- #primary -->
 </div><!-- .wrap -->

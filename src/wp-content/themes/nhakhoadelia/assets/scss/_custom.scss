@@ -1,0 +1,14 @@
+.page-link {
+  color: $color_green;
+
+  font-weight: 400;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.page-item.active .page-link {
+  background-color: $color_green;
+  border-color: $color_green;
+}
