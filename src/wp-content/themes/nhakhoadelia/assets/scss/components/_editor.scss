@@ -180,12 +180,12 @@
 }
 
 .p-post_content a {
-  color: #ca3c08;
+  color: $color_green;
   text-decoration: none;
 }
 
 .p-post_content a:visited {
-  color: #ac0404;
+  color: $color_green;
 }
 
 .p-post_content a:focus {
@@ -354,6 +354,7 @@
 
 .p-post_content ul {
   list-style: square;
+  font-size: 1rem;
 }
 
 .p-post_content ol,
