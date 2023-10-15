@@ -15,7 +15,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="p-visual">
+	<!-- <div class="p-visual">
 		<div class="p-visual_action only-sp">
 			<div class="p-visual_btn d-flex align-items-center justify-content-center">
 				<a href="<?php echo get_site_url() ?>/dat-lich/" class="btn-booking">Đặt lịch</a>
@@ -24,7 +24,7 @@ get_header();
 				</a>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="l-content">
 		<div class="container-lg">
